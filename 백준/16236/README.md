@@ -1,4 +1,4 @@
-# 백준 16236 - 아기 상어 &nbsp; :large_Blue_circle:
+# 백준 16236 - 아기 상어 &nbsp; :large_blue_circle:
 ![#000000](https://placehold.it/15/000000/000000?text=+) bfs의 반복문제  
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 먹이를 찾았다고 bfs를 끝내면 안되고 해당 깊이까지는 다 돌아야함.  
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 해당 깊이에서 후보군에 넣을 때 조건이 필요함(0이 아니고 자신보다 작은 크기일 때)  
