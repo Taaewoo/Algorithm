@@ -17,7 +17,7 @@ int dir[8][2] = {{-1,-1}, {-1,0}, {-1,1},
 void year(int y){
     vector<int> death[11][11];
     
-    //Spring
+    //Spring & Summer
     FOR(i,0,n){
         FOR(j,0,n){
             int temp = 0;
@@ -30,7 +30,6 @@ void year(int y){
                 }
                 else{
                     temp+=v[i][j][k]/2;
-                    //death[i][j].push_back(v[i][j][k].first);
                     v[i][j].erase(v[i][j].begin()+k);
                     k--;
                 }
@@ -38,13 +37,6 @@ void year(int y){
             arr[i][j] += temp;
         }
     }
-//
-//    //Summer
-//    FOR(i,0,n)
-//        FOR(j,0,n)
-//            FOR(k,0,death[i][j].size())
-//                arr[i][j] += death[i][j][k]/2;
-//
     
     //Fall
     FOR(i,0,n){
