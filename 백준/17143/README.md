@@ -1,4 +1,4 @@
-# 백준 17143 - 낚시왕 &nbsp; :red_circle:
+# 백준 17143 - 낚시왕 &nbsp; :red_circle: :red_circle:
 ![#000000](https://placehold.it/15/000000/000000?text=+) simulation 문제  
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 상어 잡기, 상어 움직이기 모두 구현했는데, 상어가 겹칠 때 효율적으로 삭제시키는 방법을 알아야함.  
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 구현은 할 수 있겠지만 너무 비효율적인 방법인 것 같음.  
