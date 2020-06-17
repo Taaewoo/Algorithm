@@ -1,4 +1,4 @@
-# 백준 1664 - 소수의 연속합 &nbsp; :blue_large_circle:
+# 백준 1664 - 소수의 연속합 &nbsp; :large_blue_circle:
 ![#000000](https://placehold.it/15/000000/000000?text=+) two pointers 문제  
 ![#000000](https://placehold.it/15/000000/000000?text=+) S, E를 가리키는 변수를 만들어 각각 움직이며 확인.   
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) S, E의 다음 값이 소수 중에서 골라야 함.
