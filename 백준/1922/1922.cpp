@@ -1,52 +1,53 @@
 #include <iostream>
+#include <vector>
 #include <algorithm>
+#include <string.h>
 using namespace std;
 
-int uf[1000];
+#define FOR(x,n,m)  for(int x=n;x<(m);x++)
 
-struct Edge {
-	int u, v, w;
-	Edge() : Edge(-1, -1, 0) {}
-	Edge(int uu, int vv, int ww) : u(uu), v(vv), w(ww) {}
-	bool operator <(const Edge& e)const { return w < e.w; }
+typedef struct L{
+    int f,t,c;
+    L(int F, int T, int C) : f(F), t(T), c(C) {}
+    bool operator <(const L& l)const{ return c < l.c; }
 };
 
-Edge l[100001];
+int n,m;
+vector<L> v;
+int uf[1001];
 
-int find(int a) {
-	if (uf[a] < 0) return a;
-	return uf[a] = find(uf[a]);
+int find_uf(int a){
+    if(uf[a]==-1) return a;
+    return uf[a] = find_uf(uf[a]);
 }
 
-bool merge(int a, int b) {
-	a = find(a);
-	b = find(b);
-	if (a == b) return false;
-	uf[b] = a;
-	return true;
+bool merge(int a, int b){
+    a = find_uf(a);
+    b = find_uf(b);
+    if(a==b) return false;
+    uf[b] = a;
+    return true;
 }
 
 int main() {
-	int n; scanf("%d", &n);
-	int m; scanf("%d", &m);
-
-	for (int i = 0; i < m; i++) {
-		int u, v, w;
-		scanf("%d %d %d", &u, &v, &w);
-		l[i] = Edge(u - 1, v - 1, w);
-	}
-
-	sort(l, l + m);
-
-	fill(uf, uf + n, -1);
-
-	int ans = 0, cnt = 0;;
-	for (int i = 0; i < m; i++) {
-		if (merge(l[i].u, l[i].v)) {
-			ans += l[i].w;
-			cnt++;
-			if (cnt == n - 1) break;
-		}
-	}
-	cout << ans;
+    cin >> n >> m;
+    FOR(i,0,m){
+        int from, to, cost;
+        cin >> from >> to >> cost;
+        v.push_back(L(from,to,cost));
+    }
+    
+    sort(v.begin(), v.end());
+    memset(uf,-1,sizeof(uf));
+    
+    int ans = 0;
+    int num = 0;
+    FOR(i,0,v.size()){
+        if(merge(v[i].f, v[i].t)){
+            ans += v[i].c;
+            if(++num == n-1) break;
+        }
+    }
+    
+    cout << ans;
 }
