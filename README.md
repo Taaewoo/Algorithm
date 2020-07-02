@@ -13,14 +13,14 @@
 ### Union Find  
 여러 서로소 집합의 정보를 저장하고 있는 자료구조를 의미함.  
 트리 구조로써 집합을 표현하고 경로 압축과 레벨 최적화 도입해서 유용함.  
-'''C++
+```c++
 int find(int a){
       if(uf[a] < 0) return a;
       //merge에서는 바로 위 부모만 저장하기 때문에 메모이제이션처럼 구현.
       return uf[a] = find(uf[a]); 
   }
 
-'''
+```
   
 ### Two Pointers  
 
