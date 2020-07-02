@@ -16,8 +16,7 @@
 ```c++
 int find(int a){
     if(uf[a] < 0) return a;
-    //merge에서는 바로 위 부모만 저장하기 때문에 메모이제이션처럼 구현.
-    return uf[a] = find(uf[a]); 
+    return uf[a] = find(uf[a]); //merge에서는 바로 위 부모만 저장하기 때문에 메모이제이션처럼 구현.
 }
 
 bool merge(int a, int b){
