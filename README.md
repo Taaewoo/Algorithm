@@ -1,9 +1,9 @@
 # 목차
 [**알고리즘**](#알고리즘)
- * AA
+ [* Union Find](###Union-Find)
  
 # 알고리즘
-ㅁ  
+### Union Find
 ㅁ  
 ㅁ  
 ㅁ  
