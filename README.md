@@ -60,8 +60,22 @@ while(1){
  2. N번만큼 for문을 수행, Queue의 front를 result[i]에 넣음.
  3. 자신이 가리키는 노드의 indegree를 감소시키고 0이라면 Queue에 push. 
  ( 이 때 result[i]는 정렬된 노드의 순서 )
-* 만약 for문이 돌기 전에 Queue가 empty면 싸이클 존재를 의미함.
-* for문 도중 Queue의 크기가 2이상인 것은 답이 여러개를 의미함.
+**_만약 for문이 돌기 전에 Queue가 empty면 싸이클 존재를 의미함._**
+**_for문 도중 Queue의 크기가 2이상인 것은 답이 여러개를 의미함._**
+
+~~~c++
+for(int i=0; i<N; i++){
+    if(Q.empty()){
+        return 0;
+    }
+ 
+    int cur = Q.front();
+    Q.pop();
+    result[i] = curr+1;
+    for(int next: adj[curr])
+        if(--indegree[next] == 0) Q.push(next);
+}
+~~~
 
 ### 최소 스패닝 트리(MST)  
 
