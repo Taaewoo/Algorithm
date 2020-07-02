@@ -15,11 +15,18 @@
 트리 구조로써 집합을 표현하고 경로 압축과 레벨 최적화 도입해서 유용함.  
 ```c++
 int find(int a){
-      if(uf[a] < 0) return a;
-      //merge에서는 바로 위 부모만 저장하기 때문에 메모이제이션처럼 구현.
-      return uf[a] = find(uf[a]); 
-  }
+    if(uf[a] < 0) return a;
+    //merge에서는 바로 위 부모만 저장하기 때문에 메모이제이션처럼 구현.
+    return uf[a] = find(uf[a]); 
+}
 
+bool merge(int a, int b){
+    a = find(a);
+    b = find(b);
+    if(a==b) return false;
+    uf[b] = a;
+    return true;
+}
 ```
   
 ### Two Pointers  
