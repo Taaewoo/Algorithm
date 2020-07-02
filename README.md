@@ -1,4 +1,5 @@
-* # **[알고리즘](#알고리즘)**  
+# Contests
+* ## **[알고리즘](#알고리즘)**  
   * [Union Find](#union-find)  
   * [Two Pointers](#two-pointers)  
   * [위상 정렬](#위상-정렬)  
