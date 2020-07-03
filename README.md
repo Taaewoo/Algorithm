@@ -5,8 +5,7 @@
   * [위상 정렬](#위상-정렬)  
   * [최소 스패닝 트리(MST)](#최소-스패닝-트리mst)  
   
-* ## **[문법 및 함수 정리](#문법-및-함수-정리)** 
-  * [for문 매크로](#for문-매크로)  
+* ## **[문법 및 함수 정리](#문법-및-함수-정리)**  
   * [lower_bound, upper_bound](#lower_bound,-upper_bound)
 
 <br>
@@ -97,6 +96,8 @@ for(int i=0; i<n; i++){
 
 
 # 문법 및 함수 정리
-### for문 매크로  
-
 ### lower_bound, upper_bound  
+ lower_bound(first, last, val);  
+ - first부터 last까지 중 val 보다 크거나 같은 값의 첫 위치
+ upper_bound(first, last, val);  
+ - first부터 last까지 중 val 보다 큰 값의 첫 위치
