@@ -97,7 +97,12 @@ for(int i=0; i<n; i++){
 
 # 문법 및 함수 정리
 ### lower_bound, upper_bound  
+ - first부터 last까지 중 val 보다 크거나 같은 값의 첫 위치  
+~~~c++
  lower_bound(first, last, val);  
- - first부터 last까지 중 val 보다 크거나 같은 값의 첫 위치
+~~~
+ - first부터 last까지 중 val 보다 큰 값의 첫 위치  
+~~~c++
  upper_bound(first, last, val);  
- - first부터 last까지 중 val 보다 큰 값의 첫 위치
+~~~
+
