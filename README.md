@@ -104,5 +104,68 @@ for(int i=0; i<n; i++){
  - first부터 last까지 중 val 보다 큰 값의 첫 위치  
 ~~~c++
  upper_bound(first, last, val);  
+~~~  
+  
+### C++ 구조체 생성자 오버로딩  
+~~~c++
+typedef struct S{
+      int x,y,z;
+      S(){z=1;}
+      S(int X, int Y, int Z) : x(X),y(Y),z(Z){}
+  };
+~~~  
+  
+### map 순회  
+~~~c++
+for(auto it=m.begin(); it!=m.end(); it++){
+    cout << it->first << " " << it->second; // key, value 출력
+}
 ~~~
 
+### 2차원 배열 특정 value 초기화  
+ - fill( 시작 주소, 종료 주소(마지막 원소 +1), value )
+~~~
+int dp[1000][1000];
+fill(dp[0],dp[1000], 5); // dp[999][999]에서 +1이기 때문에 dp[1000]
+~~~
+
+### 2차원 배열 90도 회전
+~~~c++
+int temp_arr[100][100];
+FOR(i,0,n) FOR(j,0,n) temp_arr[i][j] = arr[n-j-1][i];
+memmove(arr,temp_arr,sizeof(arr)); // 새로 만든 배열을 기존 배열에 다시 복사
+~~~
+
+### 2차원 행,열 바꾸기
+~~~c++
+int temp_arr[100][100];
+FOR(i,0,n) FOR(j,0,n) temp_arr[i][j] = arr[j][i];
+memmove(arr,temp_arr,sizeof(arr));
+~~~  
+  
+### 배열 내 최소, 최대값 구하기
+ - 배열 내 최소,최대를 구하는 함수로써 비교 함수도 인자로 넣어줄 수 있다.  
+ - 주의할 점은 배열의 return 값이 배열의 주소 값이기 때문에 *을 붙여줘야한다.  
+~~~c++
+*min_element(zSum, zSum+5);
+*max_element(zSum, zSum+5);
+~~~  
+  
+### 배열 복사
+ - 다차원 배열의 경우도 복사가 가능하다.
+~~~c++
+memmove(temp, arr, sizeof(arr));
+~~~
+  
+ - 2차원 배열의 행 단위로도 복사가 가능하다.
+~~~c++
+memmove(temp, arr[x], sizeof(temp));
+~~~
+
+### 2차원 vector 크기 및 값 초기화
+ - 이런 경우 6x5의 vector를 0으로 초기화.
+~~~c++
+vector<vector<int> > arr(6, vector<int>(5, 0));
+~~~
+  
+  
