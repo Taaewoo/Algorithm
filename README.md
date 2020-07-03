@@ -1,11 +1,11 @@
 # Contents
-* ## **[알고리즘](#알고리즘)**  
+* ## **[알고리즘](#알고리즘-1)**  
   * [Union Find](#union-find)  
   * [Two Pointers](#two-pointers)  
   * [위상 정렬](#위상-정렬)  
   * [최소 스패닝 트리(MST)](#최소-스패닝-트리mst)  
   
-* ## **[문법 및 함수 정리](#문법-및-함수-정리)**  
+* ## **[문법 및 함수 정리](#문법-및-함수-정리-1)**  
   * [lower_bound, upper_bound](#lower_bound-upper_bound)
   * [C++ 구조체 생성자 오버로딩](#c-구조체-생성자-오버로딩)
   * [map 순회](#map-순회)
