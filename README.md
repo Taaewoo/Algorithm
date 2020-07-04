@@ -15,6 +15,9 @@
   * [배열 내 최소, 최대값 구하기](#배열-내-최소-최대값-구하기)
   * [배열 복사](#배열-복사)
   * [2차원 vector 크기 및 값 초기화](#2차원-vector-크기-및-값-초기화)
+  * [C++ split 함수 구현](#c-split-함수-구현)
+  * [C++ split 함수 구현 2](#c-split-함수-구현-2)
+  * [C++ replace all 구현](#c-replace-all-구현)
   
 <br>
 <br>
@@ -176,4 +179,57 @@ memmove(temp, arr[x], sizeof(temp));
 vector<vector<int> > arr(6, vector<int>(5, 0));
 ~~~
   
+### C++ split 함수 구현
+~~~c++
+vector<string> split(string s, string d){
+    vector<string> result;
+    
+    auto start = 0U;
+    auto end = s.find(d);
+    while (end != string::npos){
+        result.push_back(s.substr(start, end - start));
+        start = end + d.length();
+        end = s.find(d, start);
+    }
+    result.push_back(s.substr(start, end));
+    
+    return result;
+}
+~~~
   
+### C++ split 함수 구현 2
+- split delimeter를 여러 개 지정하고 싶을 때 사용.
+- 단 strtok의 인자로 string이 아닌 char배열이 들어가야함.
+~~~c++
+vector<string> split(string s){
+    vector<string> sv;
+    
+    char cs[100];
+    strcpy(cs,s.c_str());
+    
+    char* tok3 = strtok(cs,",+");
+    while(tok3!=NULL){
+        sv.push_back(tok3);
+        tok3 = strtok(NULL,",+");
+    }
+    
+    return sv;
+}
+~~~
+  
+### C++ replace all 구현
+- x를 y로 replace.
+~~~c++
+replace( s.begin(), s.end(), 'x', 'y');
+~~~
+  
+- string을 string으로 바꾸고 싶을 때
+~~~c++
+void ReplaceAll(string &s, const string &from, const string &to){
+    size_t pos=0;
+    while((pos=s.find(from,pos)) != string::npos){
+        s.replace(pos,from.length(),to);
+        pos += to.length();
+    }
+}
+~~~
