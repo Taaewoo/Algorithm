@@ -271,7 +271,7 @@ typedef struct E{
   
 # 틀린 문제
 ### [백준 16235 - 나무 재테크](https://github.com/Taaewoo/Algorithm/tree/master/%EB%B0%B1%EC%A4%80/16235)  
-![#000000](https://placehold.it/15/000000/000000?text=+) 단순 simulation 문제      
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 단순 simulation 문제      
 ![#000000](https://placehold.it/15/000000/000000?text=+) 각각의 나무를 vector의 2차원 배열로 표현했음.    
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 봄 계절에 양분을 얻지 못하는 나무는 죽은 나무로   표현하고 삭제하지 않음.  
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 이유는 vector의 erase를 쓰고 싶지 않았기 때문에.    
