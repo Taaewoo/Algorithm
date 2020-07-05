@@ -22,7 +22,7 @@
   * [struct의 비교 함수 선언](#struct의-비교-함수-선언)  
   
 * ## **[틀린 문제](#틀린문제-1)**  
-  * [백준 16235](https://github.com/Taaewoo/Algorithm/tree/master/%EB%B0%B1%EC%A4%80/16235)    
+  * [백준 16235 - 나무 재테크](#백준-16235-나무-재테크)    
   
 <br>
 <br>
@@ -109,7 +109,7 @@ for(int i=0; i<n; i++){
     }
 }
 ~~~
-
+  
 
 # 문법 및 함수 정리
 ### lower_bound, upper_bound  
@@ -268,3 +268,7 @@ typedef struct E{
     bool operator <(const E& e)const{ return c < e.c; }
 };
 ~~~
+  
+# 틀린 문제
+### [백준 16235 - 나무 재테크](https://github.com/Taaewoo/Algorithm/tree/master/%EB%B0%B1%EC%A4%80/16235)  
+ - first부터 last까지 중 val 보다
