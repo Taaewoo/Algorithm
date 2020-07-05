@@ -18,6 +18,8 @@
   * [C++ split 함수 구현](#c-split-함수-구현)
   * [C++ split 함수 구현 2](#c-split-함수-구현-2)
   * [C++ replace all 구현](#c-replace-all-구현)
+  * [Priority Queue cmp 함수 선언](#Priority-Queue-cmp-함수-선언)
+  * [struct의 비교 함수 선언](#struct의-비교-함수-선언)  
   
 <br>
 <br>
@@ -232,4 +234,34 @@ void ReplaceAll(string &s, const string &from, const string &to){
         pos += to.length();
     }
 }
+~~~
+  
+### cmp 함수 선언  
+- 이 경우 string 길이에 따른 cmp 함수 선언.
+~~~c++
+bool cmp(string s, string s2){
+    if(s.size() < s2.size()) return true;
+    return false;
+}
+~~~
+
+### Priority Queue cmp 함수 선언
+- true가 return 되는 경우 a,b가 스왑됨.
+~~~c++
+struct cmp{
+    bool operator()(int &a, int &b){
+        return a > b;
+    }
+};
+~~~
+  
+### struct의 비교 함수 선언
+- struct 타입의 비교 연산자를 위한 경우
+- 아래는 MST를 위한 struct 선언과 비교 함수 선언 코드.
+~~~c++
+typedef struct E{
+    int f,t,c;
+    E(int F, int T, int C) : f(F), t(T), c(C) {}
+    bool operator <(const E& e)const{ return c < e.c; }
+};
 ~~~
