@@ -21,6 +21,9 @@
   * [Priority Queue cmp 함수 선언](#Priority-Queue-cmp-함수-선언)
   * [struct의 비교 함수 선언](#struct의-비교-함수-선언)  
   
+* ## **[틀린 문제](#틀린문제-1)**  
+  * [백준 16235](https://github.com/Taaewoo/Algorithm/tree/master/%EB%B0%B1%EC%A4%80/16235)    
+  
 <br>
 <br>
 
