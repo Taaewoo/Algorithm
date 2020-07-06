@@ -26,6 +26,7 @@
   * [백준 17143 - 낚시왕](#백준-17143---낚시왕-code)  
   * [SWEA 2382 - 미생물 격리](#SWEA-2382---미생물-격리-code)  
   * [백준 17136 - 색종이 붙이기](#백준-17136---색종이-붙이기-code)  
+  * [SWEA 2112 - 보호 필름](#SWEA-2112---보호-필름-code)  
   
 <br>
 <br>
@@ -311,5 +312,15 @@ typedef struct E{
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 색종이를 붙일 수 있는지에 대한 조건식에서 실수해버림.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) visit 변수에 대해서는 체크하지 않아서 시간 초과 및 오답이 나와버려서 해맸음.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 조건 잘 보고 따지고, 굳이 visit 변수를 만들지 않고 배열 값을 0으로 만들면 됨.  
+<br>
+  
+### SWEA 2112 - 보호 필름 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/SWEA/2112/2112.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) dfs 문제  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 각 줄마다 0 또는 1로 바꾸기 또는 바꾸지 않고 다음 depth로 넘어가기  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 문제의 구현자체는 크게 어렵지 않았지만 코드가 조금 더러운 느낌이 있음.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 숏코딩 참고해보자  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 모든 행에 dfs를 진행하고 끝 행에 왔을 때 return 시키는 방법을 사용해서 시간초과 뜸.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 문제의 답은 무조건 k보다 클 수 없다는 점을 이용해서 n이 k보다 크면 return 시켜야함.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) dfs는 깊이 끝까지 간다는 점을 잘 생각하고 문제를 풀어야할 듯.  
 <br>
   
