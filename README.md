@@ -29,7 +29,7 @@
   
 <br>
 <br>
-
+  
 # **알고리즘**
 ### **Union Find**  
 - 여러 서로소 집합의 정보를 저장하고 있는 자료구조를 의미함.  
@@ -271,6 +271,9 @@ typedef struct E{
     bool operator <(const E& e)const{ return c < e.c; }
 };
 ~~~
+  
+<br>
+<br>
   
 # 틀린 문제
 ### 백준 16235 - 나무 재테크 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/16235/16235.cpp)  
