@@ -24,6 +24,8 @@
 * ## **[틀린 문제](#틀린문제-1)**  
   * [백준 16235 - 나무 재테크](#백준-16235---나무-재테크-code)  
   * [백준 17143 - 낚시왕](#백준-17143---낚시왕-code)  
+  * [SWEA 2382 - 미생물 격리](#SWEA-2382---미생물-격리-code)  
+  * [백준 17136 - 색종이 붙이기](#백준-17136---색종이-붙이기-code)  
   
 <br>
 <br>
@@ -279,7 +281,6 @@ typedef struct E{
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 하지만 데이터를 남기고 있던 것이 오히려 시간을 더 오래 걸리게 했음.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) vector의 pop_back() 함수를 이용하면 해결가능함.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 원래는 pop_back을 안써서 vector의 뒤에서부터 탐색하며 erase를 했는데 대안이 생김.  
-  
 <br>
   
 ### 백준 17143 - 낚시왕 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17143/17143.cpp)  
@@ -290,6 +291,22 @@ typedef struct E{
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 이렇게 하면 가장 큰 상어를 구할지라도 삭제하는 과정에서 vector의 erase를 사용하고 코드가 길어짐.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 구조체 S 타입으로 2차원 배열 선언하고 상어의 이동이 끝날 때마다 해당 위치 상어와 비교.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 크기가 크다면 덮어 씌우고 크기가 작다면 다음으로 넘어감.  
+<br>
   
+### SWEA 2382 - 미생물 격리 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/SWEA/2382/2382.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) simulation 문제  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 이전에 삼성 기출 낚시왕 문제를 풀면서 동일한 자리에 왔을 때 삭제하는 방법 적용.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 하지만 i 번째 미생물과 해당 자리에 있는 미생물을 비교하는 즉시 값을 더해버림.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 이러면 같은 자리에 계속 값이 누적되기 때문에 뒤에 미생물들을 다 삼켜버림.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 답은 겹치는 미생물 중에서 가장 큰 미생물의 방향을 따라야함.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 그래서 미생물을 삼킬 때마다 값을 바로 더하지말고 sum[nx][ny]에 누적시키고  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 최종적으로 남은 미생물 크기에 더해줌.  
+<br>
+  
+### 백준 17136 - 색종이 붙이기 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17136/17136.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) (0,0)에서 시작해 한 칸씩 움직이면서 5개 색종이를 붙이고 dfs 재귀 사용.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 색종이를 붙일 수 있는지에 대한 조건식에서 실수해버림.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) visit 변수에 대해서는 체크하지 않아서 시간 초과 및 오답이 나와버려서 해맸음.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 조건 잘 보고 따지고, 굳이 visit 변수를 만들지 않고 배열 값을 0으로 만들면 됨.  
 <br>
   
