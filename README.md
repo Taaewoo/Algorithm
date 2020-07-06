@@ -280,6 +280,7 @@ typedef struct E{
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) vector의 pop_back() 함수를 이용하면 해결가능함.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 원래는 pop_back을 안써서 vector의 뒤에서부터 탐색하며 erase를 했는데 대안이 생김.  
   
+<br>
   
 ### 백준 17143 - 낚시왕 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17143/17143.cpp)  
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) simulation 문제  
@@ -289,4 +290,6 @@ typedef struct E{
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 이렇게 하면 가장 큰 상어를 구할지라도 삭제하는 과정에서 vector의 erase를 사용하고 코드가 길어짐.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 구조체 S 타입으로 2차원 배열 선언하고 상어의 이동이 끝날 때마다 해당 위치 상어와 비교.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 크기가 크다면 덮어 씌우고 크기가 작다면 다음으로 넘어감.  
+  
+<br>
   
