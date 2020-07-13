@@ -28,6 +28,8 @@
   * [백준 17136 - 색종이 붙이기](#백준-17136---색종이-붙이기-code)  
   * [SWEA 2112 - 보호 필름](#SWEA-2112---보호-필름-code)  
   * [SWEA 1949 - 등산로 조성](#SWEA-1949---등산로-조성-code)  
+  * [백준 1655 - 가운데를 말해요](#백준-1665---가운데를-말해요-code)  
+  * [백준 2003 - 수들의 합2](#백준-2003---수들의-합2-code)  
   
 <br>
 <br>
@@ -333,3 +335,18 @@ typedef struct E{
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 봉우리를 깎을 때 현재 위치의 값보다 -1만큼만 깎으면 됨.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+)  오히려 더 깎으면 다음 진행에 있어서 악영향이 있기 때문.  
 <br>
+  
+### 백준 1655 - 가운데를 말해요 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/1655/1655.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) priority queue 문제  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 수가 입력될 때마다 중간 번째 숫자를 출력하는 문제.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) priority queue를 1개만 사용하겠다는 고정관념에 사로잡혀 풀지 못했던 문제.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) priority queue 2개를 만들어 max heap, min heap으로 만든다.    
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) min heap의 top이 max heap의 top보다 큰 수가 들어오고  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) heap의 크기는 같거나 max heap이 1 더 크다.  
+<br>
+  
+### 백준 2003 - 수들의 합2 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/2003/2003.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) S, E를 가리키는 변수를 만들어 각각 움직이며 확인.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 풀이 및 코드 숙달할 것.  
+<br>
+  
