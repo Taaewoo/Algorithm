@@ -31,6 +31,9 @@
   * [백준 1655 - 가운데를 말해요](#백준-1655---가운데를-말해요-code)  
   * [백준 2003 - 수들의 합2](#백준-2003---수들의-합2-code)  
   
+* ## **[맞은 문제](#맞은-문제-1)**  
+  * [백준 14890 - 경사로](#백준-14890---경사로-code)  
+  
 <br>
 <br>
   
@@ -348,5 +351,14 @@ typedef struct E{
 ### 백준 2003 - 수들의 합2 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/2003/2003.cpp)  
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) S, E를 가리키는 변수를 만들어 각각 움직이며 확인.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 풀이 및 코드 숙달할 것.  
+  
+<br>
+<br>
+  
+# 맞은 문제
+### 백준 14890 - 경사로 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/14890/14890.cpp)  
+&nbsp;&nbsp;![#111111](https://placehold.it/15/000000/000000?text=+) 단순 simulation 문제  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 경사로를 넣는 조건이 다양해서 조금 까다로웠음.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 행, 열에 대해 답을 구해야 하는데 이런 경우 2차원 배열을 90도 돌리는 방법을 이용하면 쉬워짐.
 <br>
   
