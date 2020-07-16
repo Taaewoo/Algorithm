@@ -32,7 +32,8 @@
   * [백준 2003 - 수들의 합2](#백준-2003---수들의-합2-code)  
   
 * ## **[맞은 문제](#맞은-문제-1)**  
-  * [백준 14890 - 경사로](#백준-14890---경사로-code)  
+  * [백준 14890 - 경사로](#백준-14890---경사로-code)   
+  * [백준 15684 - 사다리 조작](#백준-15684---사다리-조작-code)   
   
 <br>
 <br>
@@ -360,5 +361,13 @@ typedef struct E{
 &nbsp;&nbsp;![#111111](https://placehold.it/15/000000/000000?text=+) 단순 simulation 문제  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 경사로를 넣는 조건이 다양해서 조금 까다로웠음.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 행, 열에 대해 답을 구해야 하는데 이런 경우 2차원 배열을 90도 돌리는 방법을 이용하면 쉬워짐.
+<br>
+  
+### 백준 15694 - 사다리 조작 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/15684/15684.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 단순 simulation 문제 + dfs     
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 문제는 어렵지 않은데 구현이 귀찮았음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 히든케이스( 사다리를 놓지 않아도 통과되는 경우 )를 생각 못함.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 코드 너무 더럽게 짰음. 숏코딩 참고하자.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 꼭 다시 풀어보기!!
 <br>
   
