@@ -28,6 +28,12 @@
   * [백준 17136 - 색종이 붙이기](#백준-17136---색종이-붙이기-code)  
   * [SWEA 2112 - 보호 필름](#SWEA-2112---보호-필름-code)  
   * [SWEA 1949 - 등산로 조성](#SWEA-1949---등산로-조성-code)  
+  * [백준 1655 - 가운데를 말해요](#백준-1655---가운데를-말해요-code)  
+  * [백준 2003 - 수들의 합2](#백준-2003---수들의-합2-code)  
+  
+* ## **[맞은 문제](#맞은-문제-1)**  
+  * [백준 14890 - 경사로](#백준-14890---경사로-code)   
+  * [백준 15684 - 사다리 조작](#백준-15684---사다리-조작-code)   
   
 <br>
 <br>
@@ -333,3 +339,35 @@ typedef struct E{
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 봉우리를 깎을 때 현재 위치의 값보다 -1만큼만 깎으면 됨.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+)  오히려 더 깎으면 다음 진행에 있어서 악영향이 있기 때문.  
 <br>
+  
+### 백준 1655 - 가운데를 말해요 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/1655/1655.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) priority queue 문제  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 수가 입력될 때마다 중간 번째 숫자를 출력하는 문제.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) priority queue를 1개만 사용하겠다는 고정관념에 사로잡혀 풀지 못했던 문제.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) priority queue 2개를 만들어 max heap, min heap으로 만든다.    
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) min heap의 top이 max heap의 top보다 큰 수가 들어오고  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) heap의 크기는 같거나 max heap이 1 더 크다.  
+<br>
+  
+### 백준 2003 - 수들의 합2 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/2003/2003.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) S, E를 가리키는 변수를 만들어 각각 움직이며 확인.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 풀이 및 코드 숙달할 것.  
+  
+<br>
+<br>
+  
+# 맞은 문제
+### 백준 14890 - 경사로 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/14890/14890.cpp)  
+&nbsp;&nbsp;![#111111](https://placehold.it/15/000000/000000?text=+) 단순 simulation 문제  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 경사로를 넣는 조건이 다양해서 조금 까다로웠음.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 행, 열에 대해 답을 구해야 하는데 이런 경우 2차원 배열을 90도 돌리는 방법을 이용하면 쉬워짐.
+<br>
+  
+### 백준 15694 - 사다리 조작 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/15684/15684.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 단순 simulation 문제 + dfs     
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 문제는 어렵지 않은데 구현이 귀찮았음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 히든케이스( 사다리를 놓지 않아도 통과되는 경우 )를 생각 못함.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 코드 너무 더럽게 짰음. 숏코딩 참고하자.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 꼭 다시 풀어보기!!
+<br>
+  
