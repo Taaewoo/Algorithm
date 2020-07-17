@@ -30,6 +30,7 @@
   * [SWEA 1949 - 등산로 조성](#SWEA-1949---등산로-조성-code)  
   * [백준 1655 - 가운데를 말해요](#백준-1655---가운데를-말해요-code)  
   * [백준 2003 - 수들의 합2](#백준-2003---수들의-합2-code)  
+  * [백준 19236 - 청소년 상어](#백준-19236---청소년-상어-code)  
   
 * ## **[맞은 문제](#맞은-문제-1)**  
   * [백준 14890 - 경사로](#백준-14890---경사로-code)   
@@ -352,6 +353,15 @@ typedef struct E{
 ### 백준 2003 - 수들의 합2 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/2003/2003.cpp)  
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) S, E를 가리키는 변수를 만들어 각각 움직이며 확인.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 풀이 및 코드 숙달할 것.  
+<br>
+
+### 백준 19236 - 청소년 상어 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/19236/19236.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) dfs + 시뮬레이션  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 물고기들과 상어의 움직임으로 구현하고 dfs로 다음 단계를 들어가는 문제.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 답이 계속 틀렸지만 원인을 찾지 못했음.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 그래서 결국 정답 코드를 디버깅해서 dfs 과정을 비교해서 문제를 알아냄.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 문제는 물고기들을 순서대로 움직이기 위한 변수를 dfs과정에 따라 백트래킹 하지 않음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 다른 것들은 모두 백트래킹을 구현했기 때문에 위의 변수만 추가로 백트래킹하니 맞았음.  
   
 <br>
 <br>
