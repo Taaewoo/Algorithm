@@ -35,6 +35,7 @@
 * ## **[맞은 문제](#맞은-문제-1)**  
   * [백준 14890 - 경사로](#백준-14890---경사로-code)   
   * [백준 15684 - 사다리 조작](#백준-15684---사다리-조작-code)   
+  * [백준 14891 - 톱니바퀴](#백준-14891---톱니바퀴-code)   
   
 <br>
 <br>
@@ -379,5 +380,10 @@ typedef struct E{
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 히든케이스( 사다리를 놓지 않아도 통과되는 경우 )를 생각 못함.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 코드 너무 더럽게 짰음. 숏코딩 참고하자.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 꼭 다시 풀어보기!!
+<br>
+  
+### 백준 14891 - 톱니바퀴 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/14891/14891.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 단순 simulation 문제     
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 돌리는 바퀴 기준으로 방향 변수에 대해 실수함.  
 <br>
   
