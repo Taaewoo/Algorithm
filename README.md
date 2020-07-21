@@ -31,6 +31,7 @@
   * [백준 1655 - 가운데를 말해요](#백준-1655---가운데를-말해요-code)  
   * [백준 2003 - 수들의 합2](#백준-2003---수들의-합2-code)  
   * [백준 19236 - 청소년 상어](#백준-19236---청소년-상어-code)  
+  * [백준 19237 - 어른 상어](#백준-19237---어른-상어-code)  
   
 * ## **[맞은 문제](#맞은-문제-1)**  
   * [백준 14890 - 경사로](#백준-14890---경사로-code)   
@@ -365,6 +366,19 @@ typedef struct E{
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 그래서 결국 정답 코드를 디버깅해서 dfs 과정을 비교해서 문제를 알아냄.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 문제는 물고기들을 순서대로 움직이기 위한 변수를 dfs과정에 따라 백트래킹 하지 않음.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 다른 것들은 모두 백트래킹을 구현했기 때문에 위의 변수만 추가로 백트래킹하니 맞았음.  
+<br>
+
+### 백준 19237 - 어른 상어 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/19237/19237.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 시뮬레이션  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 입력부터 어떤 자료구조를 써야할지 고민하게 했던 문제.  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 조건들이 상당히 까다롭고 디버깅이 참 힘들었음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) for문이 돌던 중 vector erase를 수행해서 끝까지 돌지 못하고 끝남.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 삭제할 index를 저장해서 for문 끝나고 sort 시킨 후 뒤에서부터 erase.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 맵에 상어 번호를 적어야 하는 부분에서 vector index를 저장해서 틀렸음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 디버깅이 힘들어 질문 검색에 있는 반례를 통해 에러를 찾음.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 꼼꼼하고 실수 없는 코딩만이 답이다....  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 이전과 같이 무언가를 잡아먹을 때 새로운 temp 맵을 만들어 상어들의 새로운 위치를 저장.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 잡아먹히는 객체는 맵에 저장하지 않는다.  
   
 <br>
 <br>
