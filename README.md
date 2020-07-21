@@ -123,7 +123,9 @@ for(int i=0; i<n; i++){
 }
 ~~~
   
-
+<br>
+<br>
+  
 # 문법 및 함수 정리
 ### lower_bound, upper_bound  
  - first부터 last까지 중 val 보다 크거나 같은 값의 첫 위치  
