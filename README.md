@@ -36,7 +36,8 @@
 * ## **[맞은 문제](#맞은-문제-1)**  
   * [백준 14890 - 경사로](#백준-14890---경사로-code)   
   * [백준 15684 - 사다리 조작](#백준-15684---사다리-조작-code)   
-  * [백준 14891 - 톱니바퀴](#백준-14891---톱니바퀴-code)   
+  * [백준 14891 - 톱니바퀴](#백준-14891---톱니바퀴-code)  
+  * [백준 15685 - 드래곤커브](#백준-15685---드래곤커브-code)  
   
 <br>
 <br>
@@ -401,5 +402,14 @@ typedef struct E{
 ### 백준 14891 - 톱니바퀴 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/14891/14891.cpp)  
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 단순 simulation 문제     
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 돌리는 바퀴 기준으로 방향 변수에 대해 실수함.  
+<br>
+  
+### 백준 15685 - 드래곤커브 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/15685/15685.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 단순 simulation 문제  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 지금까지 만들어진 방향을 vector에 저장.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 1세대를 그릴 때마다 vector의 역순으로 탐색.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 탐색을 하면서 각 방향에 +1을 해주고 그려줌.  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) Stack을 사용할까 생각했지만 vector로도 충분히 가능할 것 같아서 vector로 구현함.  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 생각해보니 Stack은 탐색이 힘들어서 적합하지 않을 듯.  
 <br>
   
