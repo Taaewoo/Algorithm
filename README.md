@@ -38,6 +38,7 @@
   * [백준 15684 - 사다리 조작](#백준-15684---사다리-조작-code)   
   * [백준 14891 - 톱니바퀴](#백준-14891---톱니바퀴-code)  
   * [백준 15685 - 드래곤커브](#백준-15685---드래곤커브-code)  
+  * [백준 16236 - 아기 상어](#백준-16236---아기-상어-code)  
   
 <br>
 <br>
@@ -411,5 +412,16 @@ typedef struct E{
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 탐색을 하면서 각 방향에 +1을 해주고 그려줌.  
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) Stack을 사용할까 생각했지만 vector로도 충분히 가능할 것 같아서 vector로 구현함.  
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 생각해보니 Stack은 탐색이 힘들어서 적합하지 않을 듯.  
+<br>
+  
+### 백준 16236 - 아기 상어 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/16236/16236.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) bfs의 반복문제  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 먹이를 찾았다고 bfs를 끝내면 안되고 해당 깊이까지는 다 돌아야함.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 해당 깊이에서 후보군에 넣을 때 조건이 필요함(0이 아니고 자신보다 작은 크기일 때)  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) bfs 순회 중 현재 깊이가 먹이를 먹은 깊이보다 많을 때 업데이트하고 return 시킴.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 이러면 먹이를 먹고 다음 깊이가 없다면 조건에 걸리지 않아 업데이트가 안됨.      
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 업데이트를 while문 밖에 두면 됨.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 그러면 조건에 걸려서 break되거나 더이상 순회할 좌표가 없을 때도 업데이트가 됨.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 단, 먹이를 먹을 때 값이 변하는 dd 값이 -1이라면 먹이를 못 먹은 경우이므로 return false.  
 <br>
   
