@@ -39,6 +39,8 @@
   * [백준 14891 - 톱니바퀴](#백준-14891---톱니바퀴-code)  
   * [백준 15685 - 드래곤커브](#백준-15685---드래곤커브-code)  
   * [백준 16236 - 아기 상어](#백준-16236---아기-상어-code)  
+  * [백준 17142 - 연구소 3](#백준-17142---연구소-3-code)  
+  * [백준 17140 - 이차원 배열과 연산](#백준-17140---이차원-배열과-연산-code)  
   
 <br>
 <br>
@@ -423,5 +425,24 @@ typedef struct E{
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 업데이트를 while문 밖에 두면 됨.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 그러면 조건에 걸려서 break되거나 더이상 순회할 좌표가 없을 때도 업데이트가 됨.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 단, 먹이를 먹을 때 값이 변하는 dd 값이 -1이라면 먹이를 못 먹은 경우이므로 return false.  
+<br>
+  
+### 백준 17142 - 연구소 3 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17142/17142.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 조합 찾기 후 bfs 문제  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 처음에 단순히 bfs가 끝나면 답을 업데이트 시켰음  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 이런 경우 빈칸이 다 없어져도 활성화되지 않은 바이러스도 활성화 시키느라 오답이 됨.      
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) bfs while에 들어가기 전에 빈칸의 개수를 세고 0개가 되면 while 탈출하도록 함.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 조합 찾을 때 dfs로 했는데 return 조건에서 실수함.  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 조합 찾는 방법으로 dfs 말고 next_permutation을 쓰면 간단해짐.  
+<br>
+  
+### 백준 17140 - 이차원 배열과 연산 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17140/17140.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) simulation 문제  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 배열을 검사해서 새로운 배열을 만드는 것은 구현했음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 하지만 시험장에서 풀었다면 시간이 부족했을 것 같음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 행마다 검사, 열마다 검사를 각각 따로 만들려고 했기때문.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 배열을 90도 돌리는 방법도 생각했지만 배열 모양이 정사각형이 아니기 때문에 불가능.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 생각해보니 회전이 아니라 행,열을 바꾸면 되는 문제였음.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 계산하는 함수는 1개만 만들고 행,열을 바꿔주며 계속 진행함.  
 <br>
   
