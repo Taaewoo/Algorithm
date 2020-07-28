@@ -41,6 +41,8 @@
   * [백준 16236 - 아기 상어](#백준-16236---아기-상어-code)  
   * [백준 17142 - 연구소 3](#백준-17142---연구소-3-code)  
   * [백준 17140 - 이차원 배열과 연산](#백준-17140---이차원-배열과-연산-code)  
+  * [백준 17779 - 게리맨더링2](#백준-17779---게리맨더링2-code)  
+  * [백준 17837 - 새로운 게임2](#백준-17837---새로운-게임2-code)  
   
 <br>
 <br>
@@ -444,5 +446,22 @@ typedef struct E{
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 배열을 90도 돌리는 방법도 생각했지만 배열 모양이 정사각형이 아니기 때문에 불가능.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 생각해보니 회전이 아니라 행,열을 바꾸면 되는 문제였음.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 계산하는 함수는 1개만 만들고 행,열을 바꿔주며 계속 진행함.  
+<br>
+  
+### 백준 17779 - 게리맨더링2 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17779/17779.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) simulation 문제  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 처음에 구역을 어떻게 나눌지에 대해 고민함.    
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 구역을 모두 5로 채운 다음 각 지역에 맞게 채우면 됨.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 1,3 구역은 열 0부터 시작해서 경계선에 만나면 다음 행으로 넘어감.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 2,4 구역은 열 n-1부터 시작해서 경계선에 만나면 다음 행으로 넘어감.  
+<br>
+  
+### 백준 17837 - 새로운 게임2 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17837/17837.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) simulation 문제  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 기본적인 구현은 다 했지만 부분부분 실수로 인해 시간이 지체됨.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 배열 값 업데이트 할 때 index 값도 업데이트 해야한다면 순서 주의하기.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 말이 이동할 때 if, else if로 파랑 or 빨강으로 했는데 이 부분에서 틀렸음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 말이 다음 칸이 파랑색이고 반대 방향도 빨강색일 때 if,else if에 의해 걸리지 않음.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 파랑 빨강일 때를 각각 if문으로 구현한다.  
 <br>
   
