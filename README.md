@@ -43,6 +43,8 @@
   * [백준 17140 - 이차원 배열과 연산](#백준-17140---이차원-배열과-연산-code)  
   * [백준 17779 - 게리맨더링2](#백준-17779---게리맨더링2-code)  
   * [백준 17837 - 새로운 게임2](#백준-17837---새로운-게임2-code)  
+  * [백준 17822 - 원판 돌리기](#백준-17822---원판-돌리기-code) 
+  * [백준 16637 - 괄호 추가하기](#백준-16637---괄호-추가하기-code) 
   
 <br>
 <br>
@@ -463,5 +465,22 @@ typedef struct E{
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 말이 이동할 때 if, else if로 파랑 or 빨강으로 했는데 이 부분에서 틀렸음.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 말이 다음 칸이 파랑색이고 반대 방향도 빨강색일 때 if,else if에 의해 걸리지 않음.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 파랑 빨강일 때를 각각 if문으로 구현한다.  
+<br>
+  
+### 백준 17822 - 원판 돌리기 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17822/17822.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) simulation, bfs 문제  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 기본적인 구현은 다 했지만 역시나 실수로 해맸음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Queue 조건에서 값이 같을 때만 추가하는 것을 빼먹음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 삭제할 index 추가할 때 Queue 시작하는 지점을 넣지 않음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 역시나 코드 한줄 복붙하는 과정에서 값을 고치지 않아 계속 답이 안나옴.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 절대로 코드 복붙하지말고 실수 줄이려면 직접 쓰자.  
+<br>
+  
+### 백준 16637 - 괄호 추가하기 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/16637/16637.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) dfs 문제       
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 문제에서 모든 연산자 우선순위는 같다고 했기 때문에 앞에서부터 차례대로 연산함.  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 핵심은 괄호를 어디에 넣을지인데 괄호안에는 연산자가 한개만 존재하기 때문에 쉬움.    
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) dfs를 이용하여 현재 지점에서 다음 숫자를 바로 연산할지 아니면  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 다음, 다다음 숫자를 괄호로 묶어서 연산할지 재귀로 들어가면 됨.  
 <br>
   
