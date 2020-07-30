@@ -44,7 +44,9 @@
   * [백준 17779 - 게리맨더링2](#백준-17779---게리맨더링2-code)  
   * [백준 17837 - 새로운 게임2](#백준-17837---새로운-게임2-code)  
   * [백준 17822 - 원판 돌리기](#백준-17822---원판-돌리기-code) 
-  * [백준 16637 - 괄호 추가하기](#백준-16637---괄호-추가하기-code) 
+  * [백준 16637 - 괄호 추가하기](#백준-16637---괄호-추가하기-code)
+  * [백준 17281 - ⚾](#백준-17281---⚾-code)
+  * [백준 17406 - 배열 돌리기4](#백준-17406---배열-돌리기4-code)
   
 <br>
 <br>
@@ -482,5 +484,19 @@ typedef struct E{
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 핵심은 괄호를 어디에 넣을지인데 괄호안에는 연산자가 한개만 존재하기 때문에 쉬움.    
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) dfs를 이용하여 현재 지점에서 다음 숫자를 바로 연산할지 아니면  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 다음, 다다음 숫자를 괄호로 묶어서 연산할지 재귀로 들어가면 됨.  
+<br>
+  
+### 백준 17281 - ⚾ [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17281/17281.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 시뮬레이션  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) next_permutation을 쓰면 쉽게 풀리는 문제.  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 매 선수마다 각각의 경우를 구현해준다.   
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 루 배열을 만들어놓고 안타의 경우 루 배열에 따라 점수가 나도록 함.  
+<br>
+  
+### 백준 17406 - 배열 돌리기4 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17406/17406.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 시뮬레이션  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) next_permutation을 쓰면 쉽게 풀리는 문제.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 배열 index 값 실수함.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 회전시킬 때 4방향의 코드가 모두 비슷하므로 배열 index 값 실수 주의.  
 <br>
   
