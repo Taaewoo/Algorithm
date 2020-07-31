@@ -47,6 +47,8 @@
   * [백준 16637 - 괄호 추가하기](#백준-16637---괄호-추가하기-code)
   * [백준 17281 - ⚾](#백준-17281----code)
   * [백준 17406 - 배열 돌리기4](#백준-17406---배열-돌리기4-code)
+  * [백준 17471 - 게리맨더링](#백준-17471---게리맨더링-code)
+  * [카카오 겨울 인턴 1번 - 크레인 인형뽑기 게임](#카카오-겨울-인턴-1번---크레인-인형뽑기-게임-code)
   
 <br>
 <br>
@@ -498,5 +500,19 @@ typedef struct E{
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) next_permutation을 쓰면 쉽게 풀리는 문제.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 배열 index 값 실수함.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 회전시킬 때 4방향의 코드가 모두 비슷하므로 배열 index 값 실수 주의.  
+<br>
+  
+### 백준 17471 - 게리맨더링 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17471/17471.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) bfs 탐색, 조합  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) next_permutation을 쓰면 쉽게 풀리는 문제.    
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 고정 갯수의 조합이 아니기 때문에 for문 안에 do while( next_permutation ) 사용.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 서로 다 연결되어있는지 확인하기 위해서 bfs를 사용했음.  
+<br>
+  
+### 카카오 겨울 인턴 1번 - 크레인 인형뽑기 게임 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EC%B9%B4%EC%B9%B4%EC%98%A4/%EA%B2%A8%EC%9A%B8%20%EC%9D%B8%ED%84%B4/1%EB%B2%88.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 명령에 맞게 인형을 옮기는 시뮬레이션  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) vector의 back(), pop_back()을 사용하면 쉬움.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+)  처음에 입력을 제대로 확인하지 않아서 틀림.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 입력은 위에부터 받기 때문에 아래부터 저장하는 새로운 2차원 vector를 만들어야함.    
 <br>
   
