@@ -48,7 +48,8 @@
   * [백준 17281 - ⚾](#백준-17281----code)
   * [백준 17406 - 배열 돌리기4](#백준-17406---배열-돌리기4-code)
   * [백준 17471 - 게리맨더링](#백준-17471---게리맨더링-code)
-  * [카카오 겨울 인턴 1번 - 크레인 인형뽑기 게임](#카카오-겨울-인턴-1번---크레인-인형뽑기-게임-code)
+  * [카카오 겨울 인턴 1번 - 크레인 인형뽑기 게임](#카카오-겨울-인턴-1번---크레인-인형뽑기-게임-code)  
+  * [SWEA 2105 - 디저트 카페](#SWEA-2105---디저트-카페-code)  
   
 <br>
 <br>
@@ -514,5 +515,11 @@ typedef struct E{
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) vector의 back(), pop_back()을 사용하면 쉬움.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+)  처음에 입력을 제대로 확인하지 않아서 틀림.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 입력은 위에부터 받기 때문에 아래부터 저장하는 새로운 2차원 vector를 만들어야함.    
+<br>
+  
+### SWEA 2105 - 디저트 카페 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/SWEA/2105/2105.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 시뮬레이션.  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 백준 게리맨더링2와 같이 4중 for문을 이용.    
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 쉬운 문제였음.  
 <br>
   
