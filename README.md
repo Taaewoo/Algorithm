@@ -532,7 +532,7 @@ typedef struct E{
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) vector 대신에 map 사용해서 시간초과를 해결함.  
 <br>
   
-### 백준 11501 - 이항 계수2 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/11051/11051.cpp)  
+### 백준 11051 - 이항 계수2 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/11051/11051.cpp)  
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) dp 문제  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 모든 경우의 조합을 구하는 경우 시간초과가 남.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) nCk = (n-1)C(k-1) + (n-1)Ck 라는 특성을 이용해 dp로 문제를 품.  
