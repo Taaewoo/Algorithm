@@ -50,6 +50,8 @@
   * [백준 17471 - 게리맨더링](#백준-17471---게리맨더링-code)
   * [카카오 겨울 인턴 1번 - 크레인 인형뽑기 게임](#카카오-겨울-인턴-1번---크레인-인형뽑기-게임-code)  
   * [SWEA 2105 - 디저트 카페](#SWEA-2105---디저트-카페-code)  
+  * [백준 9466 - 텀 프로젝트](#백준-9466---텀-프로젝트-code)  
+  * [백준 11051 - 이항 계수2](#백준-11051---이항-계수2-code)  
   
 <br>
 <br>
@@ -521,5 +523,18 @@ typedef struct E{
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 시뮬레이션.  
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 백준 게리맨더링2와 같이 4중 for문을 이용.    
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 쉬운 문제였음.  
+<br>
+  
+### 백준 9466 - 텀 프로젝트 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/9466/9466.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) dfs 문제  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 그룹 내에서 원소 찾을 때 vector의 find를 하니 시간초과가 났음.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) n이 최대 10만이기 때문에 최악의 경우 계속 10만번 가까운 순회가 발생하게 됨.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) vector 대신에 map 사용해서 시간초과를 해결함.  
+<br>
+  
+### 백준 11501 - 이항 계수2 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/11051/11051.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) dp 문제  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 모든 경우의 조합을 구하는 경우 시간초과가 남.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) nCk = (n-1)C(k-1) + (n-1)Ck 라는 특성을 이용해 dp로 문제를 품.  
 <br>
   
