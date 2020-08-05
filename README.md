@@ -4,7 +4,7 @@
   * [Two Pointers](#two-pointers)  
   * [위상 정렬](#위상-정렬)  
   * [최소 스패닝 트리(MST)](#최소-스패닝-트리mst)  
-  * [다익스트라 알고리즘(Dijkstra's Algorithm)](#다익스트라-알고리즘dijkstra's-algorithm)
+  * [다익스트라 알고리즘(Dijkstra's Algorithm)](#다익스트라-알고리즘dijkstras-algorithm)
   
 * ## **[문법 및 함수 정리](#문법-및-함수-정리-1)**  
   * [lower_bound, upper_bound](#lower_bound-upper_bound)
