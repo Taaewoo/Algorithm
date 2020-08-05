@@ -154,6 +154,25 @@ for(int i=0; i<n; i++){
 3. 이미 방문한 정점이라면 그냥 넘어간다.
 4. pq가 empty일 때까지 while문을 실행하고 빠져나오면 결과를 출력.
   
+~~~c++
+dist[k-1] = 0; // 시작점을 0으로 초기화
+pq.push(V(k-1,0));
+while(!pq.empty()){
+    V cur = pq.top(); pq.pop();
+        
+    if(visit[cur.n]) continue; // BFS와 다르게 방문할 시점에서 visit을 체크하고
+    visit[cur.n] = true; // 방문하지 않았다면 방문함과 동시에 true로 바꿔준다.
+        
+    for(auto ee : adj[cur.n]){
+        int next = ee.v;
+        if(dist[next] <= cur.d + ee.w) continue;
+            
+        dist[next] = cur.d + ee.w;
+        pq.push(V(next,dist[next]));
+    }
+}
+~~~
+  
 <br>
 <br>
   
