@@ -54,6 +54,8 @@
   * [백준 9466 - 텀 프로젝트](#백준-9466---텀-프로젝트-code)  
   * [백준 11051 - 이항 계수2](#백준-11051---이항-계수2-code)  
   * [백준 11286 - 절댓값 힙](#백준-11286---절댓값-힙-code)  
+  * [백준 1644 - 소수의 연속합](#백준-1644---소수의-연속합-code)  
+  * [백준 1806 - 부분합](#백준-1806---부분합-code)  
   
 <br>
 <br>
@@ -580,5 +582,20 @@ typedef struct E{
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) priority queue 문제  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) pair 비교와 다르게 priority queue는 비교 함수 선언이 조금 달랐음.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) compare 함수 선언에 대해서 다시 공부하게 됨.  
+<br>
+  
+### 백준 1644 - 소수의 연속합 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/1644/1664.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) two pointers 문제  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) S, E를 가리키는 변수를 만들어 각각 움직이며 확인.   
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) S, E의 다음 값을 소수 중에서 골라야 함.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 하지만 매번 다음 소수를 정할 때마다 중복되는 과정이 있기 때문에 시간 초과가 남.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 소수를 구했을 때마다 check 변수에 소수인지 아닌지 저장해놓음.  
+<br>
+  
+### 백준 1806 - 부분합 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/1806/1806.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) two pointers 문제  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) S, E를 가리키는 변수를 만들어 각각 움직이며 확인.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 길이의 최소 값을 구해야 하므로 조건을 만족할 때마다 답 갱신.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) E가 끝 지점에 왔을 때 else if( E == N ) 에 조건에 걸린다는 것은 이미 S 포인터를 움직여도 답을 찾을 수 없기 때문에 while문 종료시켜야함.  
 <br>
   
