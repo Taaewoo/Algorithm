@@ -1,57 +1,69 @@
 #include <iostream>
-#include <vector>
 #include <queue>
-#include <functional>
-#include <algorithm>
-#include <utility>
+#include <vector>
+
 using namespace std;
 
-const int Max_V = 1000;
-const int INF = 1000000000;
-typedef pair<int, int> P;
+#define FOR(x,a,b) for(int x=a; x<b; x++)
 
-int main() {
-	int n, m; scanf("%d %d", &n, &m);
+struct E{
+    int f,t,c;
+    E(int F, int T, int C) : f(F), t(T), c(C) {}
+};
 
-	vector<P> adj[Max_V];
+struct V{
+    int num,dist;
+    V(int N, int D) : num(N), dist(D) {}
+};
 
-	for (int i = 0; i < m; i++) {
-		int u, v, w;
-		scanf("%d %d %d", &u, &v, &w);
-		adj[u - 1].push_back(P(v-1, w));
-	}
+struct cmp{
+    bool operator() (V& a, V& b){
+        return a.dist > b.dist;
+    }
+};
 
-	int s, e;
-	scanf("%d %d", &s, &e);
-	s--; e--;
+int n,m,s,d;
+int dist[1000];
+bool visit[1000];
+vector<E> adj[1000];
+priority_queue<V,vector<V>,cmp> pq;
 
-	int dist[Max_V];
-	fill(dist, dist + Max_V, INF);
-	bool visit[Max_V] = { 0 };
-
-	priority_queue<P, vector<P>, greater<P>> PQ;
-
-	dist[s] = 0;
-	PQ.push(P(0, s));
-	while (!PQ.empty()) {
-		int cur;
-		do {
-			cur = PQ.top().second;
-			PQ.pop();
-		} while (!PQ.empty() && visit[cur]);
-
-		if (visit[cur]) break;
-
-		visit[cur] = true;
-
-		for (auto &p : adj[cur]) {
-			int next = p.first, d = p.second;
-			if (dist[next] > dist[cur] + d) {
-				dist[next] = dist[cur] + d;
-				PQ.push(P(dist[next], next));
-			}
-		}
-	}
-
-	cout << dist[e];
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
+    cin >> n >> m;
+    
+    FOR(i,0,n) dist[i] = 987654321;
+    
+    FOR(i,0,m){
+        int f,t,c; cin >> f >> t >> c;
+        adj[f-1].push_back(E(f-1,t-1,c));
+    }
+    
+    cin >> s >> d;
+    
+    pq.push(V(s-1,0));
+    dist[s-1] = 0;
+    while(!pq.empty()){
+        V cur = pq.top(); pq.pop();
+        
+        if(visit[cur.num]) continue;
+        visit[cur.num] = true;
+        
+        for(auto e : adj[cur.num]){
+            int next = e.t;
+            
+            if(dist[next] <= cur.dist + e.c) continue;
+            
+            dist[next] = cur.dist + e.c;
+            pq.push(V(next, dist[next]));
+        }
+    }
+    
+    cout << dist[d-1];
+    
+    return 0;
 }
