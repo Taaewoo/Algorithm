@@ -59,6 +59,8 @@
   * [백준 2096 - 내려가기](#백준-2096---내려가기-code)  
   * [백준 2623 - 음악프로그램](#백준-2623---음악프로그램-code)  
   * [백준 1516 - 게임 개발](#백준-1516---게임-개발-code)  
+  * [백준 17472 - 다리 만들기2](#백준-17472---다리-만들기2-code)  
+  * [백준 1922 - 네트워크 연결](#백준-1922---네트워크-연결-code)  
   
 <br>
 <br>
@@ -621,5 +623,22 @@ typedef struct E{
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 어떤 노드 ND가 있을 때, ND를 가리키는 노드 중 for, queue의 순서 상 가장 늦은 노드 시간 + ND의 시간으로 업데이트를 해서 틀림.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) ND를 가리키는 노드들 중 가장 긴 시간에서 ND의 시간을 더해줘야 함.  
 <img src="https://user-images.githubusercontent.com/28804154/90214301-fd711880-de32-11ea-8dd1-4824e6a60215.png"  width="45%" height="45%">  
+<br>
+  
+### 백준 17472 - 다리 만들기2 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/17472/17472.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) BFS, 조합  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) BFS로 섬을 구분한 뒤, 만들 수 있는 다리들을 저장.  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 다리들 중에서 섬 갯수 - 1개 만큼을 next permutation으로 조합을 구함.  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 선택된 다리들을 이용해 섬을 모두 방문할 수 있으면 답을 업데이트.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 처음에 다리 선택까지 했지만 섬을 다 방문할 수 있는지에 대한 풀이로 BFS를 생각 못함.   
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 1번 섬을 시작으로 BFS를 이용해 모든 섬을 방문할 수 있는지 검사한다.  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) MST로 한번 더 풀어야함.  
+<br>
+  
+### 백준 1922 - 네트워크 연결 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/1922/1922.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 최소 스패닝 트리  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 크루스칼 알고리즘을 이용하여 해결  
+&nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Union Find 구현에서 "return uf[a] = find(uf[a])"의 이유를 몰랐음.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) merge 함수에서 uf[a]는 바로 위 부모를 저장하기 때문에 find_uf 함수에서 불필요한 반복 탐색을 하므로 메모이제이션처럼 구현함.  
 <br>
   
