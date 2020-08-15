@@ -60,7 +60,8 @@
   * [백준 2623 - 음악프로그램](#백준-2623---음악프로그램-code)  
   * [백준 1516 - 게임 개발](#백준-1516---게임-개발-code)  
   * [백준 17472 - 다리 만들기2](#백준-17472---다리-만들기2-code)  
-  * [백준 1922 - 네트워크 연결](#백준-1922---네트워크-연결-code)  
+  * [백준 1922 - 네트워크 연결](#백준-1922---네트워크-연결-code)
+  * [백준 6497 - 전력난](#백준-6497---전력난-code)
   
 <br>
 <br>
@@ -640,5 +641,11 @@ typedef struct E{
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 크루스칼 알고리즘을 이용하여 해결  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Union Find 구현에서 "return uf[a] = find(uf[a])"의 이유를 몰랐음.  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) merge 함수에서 uf[a]는 바로 위 부모를 저장하기 때문에 find_uf 함수에서 불필요한 반복 탐색을 하므로 메모이제이션처럼 구현함.  
+<br>
+  
+### 백준 6497 - 전력난 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/%EB%B0%B1%EC%A4%80/6497/6497.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 최소 스패닝 트리  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 크루스칼 알고리즘을 이용하여 해결  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 기본 MST와 같이 풀고 전체 cost에서 최소 cost를 뺀 값이 정답.  
 <br>
   
