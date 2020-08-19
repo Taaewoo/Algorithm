@@ -61,7 +61,8 @@
   * [백준 1516 - 게임 개발](#백준-1516---게임-개발-code)  
   * [백준 17472 - 다리 만들기2](#백준-17472---다리-만들기2-code)  
   * [백준 1922 - 네트워크 연결](#백준-1922---네트워크-연결-code)
-  * [백준 6497 - 전력난](#백준-6497---전력난-code)
+  * [백준 6497 - 전력난](#백준-6497---전력난-code)  
+  * [카카오 20 인턴 1번 - 키패드 누르기](#카카오-20-인턴-1번---키패드-누르기-code)  
   
 <br>
 <br>
@@ -647,5 +648,11 @@ typedef struct E{
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 최소 스패닝 트리  
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 크루스칼 알고리즘을 이용하여 해결  
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 기본 MST와 같이 풀고 전체 cost에서 최소 cost를 뺀 값이 정답.  
+<br>
+  
+### 카카오 20 인턴 1번 - 키패드 누르기 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/카카오/20%20인턴쉽/1번.cpp)  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 시뮬레이션  
+&nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) 쉬웠던 문제.  
+&nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 숫자에 따라 왼손가락 위치, 오른손가락 위치를 업데이트한다.  
 <br>
   
