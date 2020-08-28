@@ -679,7 +679,7 @@ typedef struct E{
 &nbsp;&nbsp;![#1589F0](https://placehold.it/15/1589F0/000000?text=+) 코딩 테스트 당시 two pointer를 몰라서 아예 풀지 않았는데 공부하니 풀었음.  
 <br>
   
-### 카카오 20 인턴 4번 - 경주 건설 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/카카오/20%20인턴쉽/4번.cpp)  
+### 카카오 20 인턴 4번 - 경주로 건설 [(Code)](https://github.com/Taaewoo/Algorithm/blob/master/카카오/20%20인턴쉽/4번.cpp)  
 &nbsp;&nbsp;![#000000](https://placehold.it/15/000000/000000?text=+) bfs 문제    
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 코딩테스트 당시 dfs를 메모이제이션을 이용했지만 답이 계속 틀려 실패.  
 &nbsp;&nbsp;![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 평소 bfs문제는 이동 가중치가 모두 같기 때문에 목적지에 먼저 도착하는 경로가 최소 경로임.  
