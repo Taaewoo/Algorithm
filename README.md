@@ -23,9 +23,8 @@
   * [struct의 비교 함수 선언](#struct의-비교-함수-선언)  
   
 * ## **다시 풀어볼 문제**  
-    [[LeetCode] 11. Container With Most Water](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/011~020/11)
-    
-    [LeetCode] 15. 3Sum
+  * [[LeetCode] 11. Container With Most Water](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/011~020/11)
+  * [[LeetCode] 15. 3Sum](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/011~020/15)
   
   
 <br>
