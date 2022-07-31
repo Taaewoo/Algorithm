@@ -6,7 +6,6 @@
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:    
         cur = head
-        prior = head
         
         cnt = 1
         while cur.next!=None:
@@ -24,10 +23,9 @@ class Solution:
         
         for i in range(0,n+1):
             if i==n-1:
-                prior = cur
-            if i==n:
-                prior.next = cur.next
+                cur.next = cur.next.next
                 break
+            
             cur = cur.next
             
         return head
