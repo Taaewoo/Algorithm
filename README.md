@@ -6,7 +6,10 @@
   * [최소 스패닝 트리(MST)](#최소-스패닝-트리mst)  
   * [다익스트라 알고리즘(Dijkstra's Algorithm)](#다익스트라-알고리즘dijkstras-algorithm)
   
-* ## **[문법 및 함수 정리](#문법-및-함수-정리-1)**  
+* ## **[문법 및 함수 정리](#문법-및-함수-정리-1)**
+* ### [Python](#Python)
+  * [Priority Queue 사용](#Priority-Queue-사용)
+* ### [C++](#C++)
   * [lower_bound, upper_bound](#lower_bound-upper_bound)
   * [C++ 구조체 생성자 오버로딩](#c-구조체-생성자-오버로딩)
   * [map 순회](#map-순회)
@@ -20,7 +23,7 @@
   * [C++ split 함수 구현 2](#c-split-함수-구현-2)
   * [C++ replace all 구현](#c-replace-all-구현)
   * [Priority Queue cmp 함수 선언](#Priority-Queue-cmp-함수-선언)
-  * [struct의 비교 함수 선언](#struct의-비교-함수-선언)  
+  * [struct의 비교 함수 선언](#struct의-비교-함수-선언) 
   
 * ## **다시 풀어볼 문제**  
   * [[LeetCode] 11. Container With Most Water](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/011~020/11)
@@ -155,6 +158,15 @@ while(!pq.empty()){
 <br>
   
 # 문법 및 함수 정리
+## Python
+### Priority Queue 사용
+ - heapq package를 사용하는 것이 일반 PriorityQueue보다 더 빠름
+ - queue_name 이름 list에 val 값 넣기
+~~~python
+ heapq.heappush(queue_name, val)
+~~~
+
+## C++
 ### lower_bound, upper_bound  
  - first부터 last까지 중 val 보다 크거나 같은 값의 첫 위치  
 ~~~c++
