@@ -26,6 +26,8 @@
   * [[LeetCode] 11. Container With Most Water](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/011~020/11)
   * [[LeetCode] 15. 3Sum](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/011~020/15)
   
+* ## **알고리즘 키워드**  
+  * 연속된 index의 배열 합 -> 구간 합
   
 <br>
 <br>
