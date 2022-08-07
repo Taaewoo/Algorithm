@@ -172,7 +172,7 @@ while(!pq.empty()){
  - "queue_name" list에서 priority value 모두 꺼내기
 ~~~python
 while queue:
-    tmp = ListNode(heapq.heappop(queue))
+    heapq.heappop(queue)
 ~~~
 
 
