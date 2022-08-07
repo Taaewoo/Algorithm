@@ -161,10 +161,21 @@ while(!pq.empty()){
 ## Python
 ### Priority Queue 사용
  - heapq package를 사용하는 것이 일반 PriorityQueue보다 더 빠름
- - queue_name 이름 list에 val 값 넣기
+ - "queue_name" list에 val 값 넣기
 ~~~python
  heapq.heappush(queue_name, val)
 ~~~
+ - "queue_name" list에서 priority value 꺼내기 ( 삭제 포함 )
+~~~python
+ heapq.heappop(queue_name)
+~~~
+ - "queue_name" list에서 priority value 모두 꺼내기
+~~~python
+while queue:
+    tmp = ListNode(heapq.heappop(queue))
+~~~
+
+
 
 ## C++
 ### lower_bound, upper_bound  
