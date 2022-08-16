@@ -9,6 +9,9 @@
 * ## **[문법 및 함수 정리](#문법-및-함수-정리-1)**
 * ### [Python](#Python)
   * [Priority Queue 사용](#Priority-Queue-사용)
+  * [변수 값 일괄 수정](#변수-값-일괄-수정)
+  * [시간 Stinrg을 int형 분 또는 초로 계산하기](#시간-Stinrg을-int형-분-또는-초로-계산하기)
+
 * ### [C++](#C++)
   * [lower_bound, upper_bound](#lower_bound-upper_bound)
   * [C++ 구조체 생성자 오버로딩](#c-구조체-생성자-오버로딩)
