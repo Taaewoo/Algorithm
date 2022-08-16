@@ -193,8 +193,21 @@ a,b,c = b,a,b
 # 2,1,2
 print(a,b,c)
 ~~~
- 
 
+### 시간 Stinrg을 int형 분 또는 초로 계산하기
+ - 시:분 일 때 분으로 환산  
+~~~python
+times = "01:30"
+time_table = [60,1]
+sum([a*b for a,b in zip(time_table,map(int,times[i+1].split(":")))])
+~~~
+
+ - 시:분:초 일 때 초로 환산  
+~~~python
+times = "01:30:25"
+time_table = [3600,60,1]
+sum([a*b for a,b in zip(time_table,map(int,times[i+1].split(":")))])
+~~~
 
 ## C++
 ### lower_bound, upper_bound  
