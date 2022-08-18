@@ -212,6 +212,20 @@ time_table = [3600,60,1]
 sum([a*b for a,b in zip(time_table,map(int,times[i+1].split(":")))])
 ~~~
 
+### Binary Search 함수 사용
+ - List에서 특정 숫자가 들어갈 index를 얻을 수 있음.
+ - 이 때 동일한 숫자가 List 안에 있을 때 기준이 필요함.
+   - 동일한 숫자 앞에 위치시킬 것인가?
+   - 동일한 숫자 뒤에 위치시킬 것인가?
+
+~~~python
+from bisect import bisect_left, bisect_right
+
+l = [1,3,4,5,5,5,6]
+bisect_left(l, 5) # 결과 값 : 3
+bisect_right(l, 5) # 결과 값 : 6
+~~~
+
 ## C++
 ### lower_bound, upper_bound  
  - first부터 last까지 중 val 보다 크거나 같은 값의 첫 위치  
