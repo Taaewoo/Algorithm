@@ -215,8 +215,8 @@ sum([a*b for a,b in zip(time_table,map(int,times[i+1].split(":")))])
 ### Binary Search 함수 사용
  - List에서 특정 숫자가 들어갈 index를 얻을 수 있음.
  - 이 때 동일한 숫자가 List 안에 있을 때 기준이 필요함.
-   - 동일한 숫자 앞에 위치시킬 것인가?
-   - 동일한 숫자 뒤에 위치시킬 것인가?
+   - 동일한 숫자 앞에 위치시킬 것인가? -> bisect_left(list, num)
+   - 동일한 숫자 뒤에 위치시킬 것인가? -> bisect_left(list, num)
 
 ~~~python
 from bisect import bisect_left, bisect_right
