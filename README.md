@@ -226,6 +226,15 @@ bisect_left(l, 5) # 결과 값 : 3
 bisect_right(l, 5) # 결과 값 : 6
 ~~~
 
+### 삼항 연산자
+ - (True일 때 value) if (조건) else (False일 때 value)
+
+~~~python
+val = 3 if True else 2
+
+print(val) # 3
+~~~
+
 ## C++
 ### lower_bound, upper_bound  
  - first부터 last까지 중 val 보다 크거나 같은 값의 첫 위치  
