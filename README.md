@@ -9,6 +9,12 @@
 * ## **[문법 및 함수 정리](#문법-및-함수-정리-1)**
 * ### [Python](#Python)
   * [Priority Queue 사용](#Priority-Queue-사용)
+  * [변수 값 일괄 수정](#변수-값-일괄-수정)
+  * [시간 Stinrg을 int형 분 또는 초로 계산하기](#시간-Stinrg을-int형-분-또는-초로-계산하기)
+  * [Binary Search 함수 사용](#Binary-Search-함수-사용)
+  * [삼항 연산자](#삼항-연산자)
+
+
 * ### [C++](#C++)
   * [lower_bound, upper_bound](#lower_bound-upper_bound)
   * [C++ 구조체 생성자 오버로딩](#c-구조체-생성자-오버로딩)
@@ -193,8 +199,44 @@ a,b,c = b,a,b
 # 2,1,2
 print(a,b,c)
 ~~~
- 
 
+### 시간 Stinrg을 int형 분 또는 초로 계산하기
+ - 시:분 일 때 분으로 환산  
+~~~python
+times = "01:30"
+time_table = [60,1]
+sum([a*b for a,b in zip(time_table,map(int,times[i+1].split(":")))])
+~~~
+
+ - 시:분:초 일 때 초로 환산  
+~~~python
+times = "01:30:25"
+time_table = [3600,60,1]
+sum([a*b for a,b in zip(time_table,map(int,times[i+1].split(":")))])
+~~~
+
+### Binary Search 함수 사용
+ - List에서 특정 숫자가 들어갈 index를 얻을 수 있음.
+ - 이 때 동일한 숫자가 List 안에 있을 때 기준이 필요함.
+   - 동일한 숫자 앞에 위치시킬 것인가? -> bisect_left(list, num)
+   - 동일한 숫자 뒤에 위치시킬 것인가? -> bisect_left(list, num)
+
+~~~python
+from bisect import bisect_left, bisect_right
+
+l = [1,3,4,5,5,5,6]
+bisect_left(l, 5) # 결과 값 : 3
+bisect_right(l, 5) # 결과 값 : 6
+~~~
+
+### 삼항 연산자
+ - (True일 때 value) if (조건) else (False일 때 value)
+
+~~~python
+val = 3 if True else 2
+
+print(val) # 3
+~~~
 
 ## C++
 ### lower_bound, upper_bound  
