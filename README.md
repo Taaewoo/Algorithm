@@ -13,23 +13,6 @@
   * [시간 Stinrg을 int형 분 또는 초로 계산하기](#시간-Stinrg을-int형-분-또는-초로-계산하기)
   * [Binary Search 함수 사용](#Binary-Search-함수-사용)
   * [삼항 연산자](#삼항-연산자)
-
-
-* ### [C++](#C++)
-  * [lower_bound, upper_bound](#lower_bound-upper_bound)
-  * [C++ 구조체 생성자 오버로딩](#c-구조체-생성자-오버로딩)
-  * [map 순회](#map-순회)
-  * [2차원 배열 특정 value 초기화](#2차원-배열-특정-value-초기화)
-  * [2차원 배열 90도 회전](#2차원-배열-90도-회전)
-  * [2차원 행,열 바꾸기](#2차원-행열-바꾸기)
-  * [배열 내 최소, 최대값 구하기](#배열-내-최소-최대값-구하기)
-  * [배열 복사](#배열-복사)
-  * [2차원 vector 크기 및 값 초기화](#2차원-vector-크기-및-값-초기화)
-  * [C++ split 함수 구현](#c-split-함수-구현)
-  * [C++ split 함수 구현 2](#c-split-함수-구현-2)
-  * [C++ replace all 구현](#c-replace-all-구현)
-  * [Priority Queue cmp 함수 선언](#Priority-Queue-cmp-함수-선언)
-  * [struct의 비교 함수 선언](#struct의-비교-함수-선언) 
   
 * ## **다시 풀어볼 문제**  
   * [[LeetCode] 11. Container With Most Water](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/011~020/11)
