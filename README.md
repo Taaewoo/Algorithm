@@ -13,6 +13,8 @@
   * [시간 Stinrg을 int형 분 또는 초로 계산하기](#시간-Stinrg을-int형-분-또는-초로-계산하기)
   * [Binary Search 함수 사용](#Binary-Search-함수-사용)
   * [삼항 연산자](#삼항-연산자)
+  * [Dictionary key 값 여부에 상관 없이 List에 값 append 하기](#Dictionary-key-값-여부에-상관-없이-List에-값-append-하기)
+  
   
 * ## **다시 풀어볼 문제**  
   * [[LeetCode] 11. Container With Most Water](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/011~020/11)
