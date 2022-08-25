@@ -221,6 +221,20 @@ val = 3 if True else 2
 print(val) # 3
 ~~~
 
+
+### Dictionary key 값 여부에 상관 없이 List에 값 append 하기
+ - Dictionary의 value가 List라면 Dictionary의 key 값을 항상 체크해야했음.
+   - 1줄짜리 코드가 if, else 까지 4줄이 되어버림.
+ - Dictionary의 setdefault 함수를 사용하면 key 여부에 상관 없이 append 가능.
+
+~~~python
+dic = {}
+
+dic.setdefault("aa",[]).append(11)
+
+print(dic["aa"]) # 11
+~~~
+
 ## C++
 ### lower_bound, upper_bound  
  - first부터 last까지 중 val 보다 크거나 같은 값의 첫 위치  
