@@ -21,6 +21,7 @@
   * [[LeetCode] 15. 3Sum](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/011~020/15)
   * [[LeetCode] 25. Reverse Nodes in k-Group](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/25-reverse-nodes-in-k-group)
   * [[LeetCode] 26. Remove Duplicates from Sorted Array](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/26-remove-duplicates-from-sorted-array)
+  * [[KaKao] 22 신입 1차 5. 양과 늑대]()
   
 * ## **알고리즘 키워드**  
   * 연속된 index의 배열 합 -> 구간 합
