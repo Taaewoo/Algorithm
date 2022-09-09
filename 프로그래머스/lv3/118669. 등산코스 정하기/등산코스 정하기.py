@@ -1,44 +1,40 @@
-import collections
+from collections import deque, defaultdict
 
-def makeGraph(paths, n):
-    result = collections.defaultdict(list)
-    for g1, g2, way in paths:
-        result[g1].append([g2, way])
-        result[g2].append([g1, way])
-    return result
-
-def bfs(n, graph, gates, summits, distance):
-    que = collections.deque(gates)
-    while que:
-        cur_loc = que.popleft()
-        if cur_loc in summits: continue
-        for next_loc, way in graph[cur_loc]:
-            if distance[next_loc] > max(distance[cur_loc], way):
-                que.append(next_loc)
-                distance[next_loc] = max(distance[cur_loc], way)
-                
-    return distance
-        
 def solution(n, paths, gates, summits):
-    answer = []
-    graph = makeGraph(paths, n)
-    summits_dict = {}
-    min_dis = float('inf')
-    min_summit = -1
-    for summit in summits:
-        summits_dict[summit] = 1
+    answer = [-1,10000001]
+    con = defaultdict(list)
+    summits_dic = {}
+    intensity = [10000001 for _ in range(n+1)]
     
-    distance = [10000001 for _ in range(n+1)]
-    for gate in gates:
-        distance[gate] = 0
+    for i,j,w in paths:
+        con[i].append([j,w])
+        con[j].append([i,w])
         
-    distance = bfs(n, graph, gates, summits_dict, distance)
+    q = deque()
+    for g in gates:
+        q.append([g,0])
+        intensity[g]=0
         
-    for summit in summits:
-        if min_dis > distance[summit]:
-            min_dis = distance[summit]
-            min_summit = summit
-        elif min_dis == distance[summit] and min_summit > summit:
-            min_summit = summit
-                
-    return [min_summit, min_dis]
+    for s in summits:
+        summits_dic[s] = 1
+    
+    while q:
+        idx, cur_intensity = q.popleft()
+        
+        if idx in summits_dic:
+            continue
+        
+        for j,w in con[idx]:
+            new_intensity = max(cur_intensity, w)
+            if new_intensity < intensity[j]:
+                q.append([j,new_intensity])
+                intensity[j] = new_intensity
+            
+    
+    summits.sort()
+    for s in summits:
+        if intensity[s] < answer[1]:
+            answer[0] = s
+            answer[1] = intensity[s]
+    
+    return answer
