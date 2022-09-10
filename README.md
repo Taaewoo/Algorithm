@@ -23,6 +23,7 @@
   * [[LeetCode] 26. Remove Duplicates from Sorted Array](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/26-remove-duplicates-from-sorted-array)
   * [[KaKao] 22 신입 1차 5. 양과 늑대]()
   * [[KaKao] 2022 KAKAO TECH INTERNSHIP 3. 등산코스 정하기](https://github.com/Taaewoo/Algorithm/tree/master/Kakao/2022%20KAKAO%20TECH%20INTERNSHIP/118669.%E2%80%85%EB%93%B1%EC%82%B0%EC%BD%94%EC%8A%A4%E2%80%85%EC%A0%95%ED%95%98%EA%B8%B0)
+  * [[KaKao] 2022 KAKAO TECH INTERNSHIP 4. 코딩 테스트 공부](https://github.com/Taaewoo/Algorithm/tree/master/Kakao/2022%20KAKAO%20TECH%20INTERNSHIP/118668.%E2%80%85%EC%BD%94%EB%94%A9%E2%80%85%ED%85%8C%EC%8A%A4%ED%8A%B8%E2%80%85%EA%B3%B5%EB%B6%80)
   
   
 * ## **알고리즘 메모**  
