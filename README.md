@@ -23,8 +23,9 @@
   * [[LeetCode] 26. Remove Duplicates from Sorted Array](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/26-remove-duplicates-from-sorted-array)
   * [[KaKao] 22 신입 1차 5. 양과 늑대]()
   
-* ## **알고리즘 키워드**  
+* ## **알고리즘 메모**  
   * 연속된 index의 배열 합 -> 구간 합.
+  * BFS에서 노드의 visit 체크를 하면 안되는 경우 -> 노드마다 max 또는 min 값을 저장하고 최적 값 발견 시 Queue에 추가 및 값 업데이트
   
 <br>
 <br>
