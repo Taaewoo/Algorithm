@@ -11,8 +11,6 @@ class Solution:
                 j += 1
                 lps[i] = j
                 
-        print(lps)
-                
         j = 0
         for i in range(0,len(haystack)):
             while not( j == 0 or haystack[i] == needle[j] ):
