@@ -4,22 +4,24 @@ class Solution:
         
         j = 0
         for i in range(1,len(needle)):
-            while j > 0 and needle[i] != needle[j]:
+            while not( j == 0 or needle[i] == needle[j] ):
                 j = lps[j-1]
                 
             if needle[i] == needle[j]:
                 j += 1
                 lps[i] = j
                 
+        print(lps)
+                
         j = 0
         for i in range(0,len(haystack)):
-            while j > 0 and haystack[i] != needle[j]:
+            while not( j == 0 or haystack[i] == needle[j] ):
                 j = lps[j-1]
                 
             if haystack[i] == needle[j]:
                 if j == len(needle)-1:
-                    return i-len(needle)+1
-                
+                    return i - j
                 j += 1
-                
         return -1
+                
+            
