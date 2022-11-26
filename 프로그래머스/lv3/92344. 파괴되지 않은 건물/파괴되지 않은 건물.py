@@ -10,24 +10,18 @@ def solution(board, skill):
         acc[r2+1][c1] += t * d
         acc[r2+1][c2+1] += -t * d
         
-    
-        
     for i in range(len(acc)):
         temp = 0
         for j in range(len(acc[0])):
             temp += acc[i][j]
             acc[i][j] = temp
             
-    for j in range(len(acc[0])):
+    for j in range(len(board[0])):
         temp = 0
-        for i in range(len(acc)):
+        for i in range(len(board)):
             temp += acc[i][j]
             acc[i][j] = temp
-    
-    for i in range(len(board)):
-        for j in range(len(board[0])):
             board[i][j] += acc[i][j]
             if(board[i][j] > 0): answer += 1
-    
     
     return answer
