@@ -14,6 +14,7 @@
   * [Binary Search 함수 사용](#Binary-Search-함수-사용)
   * [삼항 연산자](#삼항-연산자)
   * [Dictionary key 값 여부에 상관 없이 List에 값 append 하기](#Dictionary-key-값-여부에-상관-없이-List에-값-append-하기)
+  * [Deep Copy](#deep-copy)
   
   
 * ## **다시 풀어볼 문제**  
@@ -240,6 +241,23 @@ dic = {}
 dic.setdefault("aa",[]).append(11)
 
 print(dic["aa"]) # 11
+~~~
+
+### Deep Copy
+ - Deep Copy를 하게 되면 주소 값 복사가 아니기 때문에 서로 다른 객체가 됨.
+
+~~~python
+import copy
+
+l = [[1,2,3],[4,5,6],[7,8,9]]
+
+tmp_l = copy.deepcopy(l)
+
+tmp_l[0][0] = 6
+
+print(l)
+
+# [[1,2,3],[4,5,6],[7,8,9]]
 ~~~
 
 ## C++
