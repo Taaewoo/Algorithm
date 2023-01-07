@@ -9,6 +9,7 @@
   * [Dictionary key 값 여부에 상관 없이 List에 값 append 하기](#Dictionary-key-값-여부에-상관-없이-List에-값-append-하기)
   * [Deep Copy](#deep-copy)
   * [Reversed for문](#reversed-for문)
+  * [공백문자열을 공백으로 split](#공백문자열을-공백으로-split)
   
 
 * ## **[알고리즘](#알고리즘-1)**  
@@ -153,6 +154,16 @@ for l in reversed(list):
 # 3
 # 2
 # 1
+~~~
+
+### 공백문자열을 공백으로 split
+ - 공백으로 이루어진 문자열을 공백으로 split을 하면 어떻게 될까?
+ - 공백으로 기준으로 "" 길이 0인 문자열이 원소로 추가됨.
+
+~~~python
+print("   ".split(" "))
+
+# ['', '', '', '']
 ~~~
 
 ## C++
