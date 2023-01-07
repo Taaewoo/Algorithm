@@ -1,21 +1,23 @@
 # Contents
-* ## **[알고리즘](#알고리즘-1)**  
-  * [Union Find](#union-find)  
-  * [Two Pointers](#two-pointers)  
-  * [위상 정렬](#위상-정렬)  
-  * [최소 스패닝 트리(MST)](#최소-스패닝-트리mst)  
-  * [다익스트라 알고리즘(Dijkstra's Algorithm)](#다익스트라-알고리즘dijkstras-algorithm)
-  
 * ## **[문법 및 함수 정리](#문법-및-함수-정리-1)**
-* ### [Python](#Python)
-  * [Priority Queue 사용](#Priority-Queue-사용)
+* ### [Python](#python-1)
+  * [Priority Queue 사용](#priority-queue-사용)
   * [변수 값 일괄 수정](#변수-값-일괄-수정)
   * [시간 Stinrg을 int형 분 또는 초로 계산하기](#시간-Stinrg을-int형-분-또는-초로-계산하기)
   * [Binary Search 함수 사용](#Binary-Search-함수-사용)
   * [삼항 연산자](#삼항-연산자)
   * [Dictionary key 값 여부에 상관 없이 List에 값 append 하기](#Dictionary-key-값-여부에-상관-없이-List에-값-append-하기)
   * [Deep Copy](#deep-copy)
+  * [Reversed for문](#reversed-for문)
   
+
+* ## **[알고리즘](#알고리즘-1)**  
+  * [Union Find](#union-find)  
+  * [Two Pointers](#two-pointers)  
+  * [위상 정렬](#위상-정렬)  
+  * [최소 스패닝 트리(MST)](#최소-스패닝-트리mst)  
+  * [다익스트라 알고리즘(Dijkstra's Algorithm)](#다익스트라-알고리즘dijkstras-algorithm)
+ 
   
 * ## **다시 풀어볼 문제**  
   * [[LeetCode] 11. Container With Most Water](https://github.com/Taaewoo/Algorithm/tree/master/LeetCode/011~020/11)
@@ -30,131 +32,6 @@
 * ## **알고리즘 메모**  
   * 연속된 index의 배열 합 -> 구간 합.
   * BFS에서 노드의 visit 체크를 하면 안되는 경우 -> 노드마다 max 또는 min 값을 저장하고 최적 값 발견 시 Queue에 추가 및 값 업데이트
-  
-<br>
-<br>
-  
-# **알고리즘**
-### **Union Find**  
-- 여러 서로소 집합의 정보를 저장하고 있는 자료구조를 의미함.  
-- 트리 구조로써 집합을 표현하고 경로 압축과 레벨 최적화 도입해서 유용함.  
-#### C++
-```c++
-int find(int a){
-    if(uf[a] < 0) return a;
-    return uf[a] = find(uf[a]); //merge에서는 바로 위 부모만 저장하기 때문에 메모이제이션처럼 구현.
-}
-
-bool merge(int a, int b){
-    a = find(a);
-    b = find(b);
-    if(a==b) return false;
-    uf[b] = a;
-    return true;
-}
-```
-<br>
-
-### **Two Pointers**  
-- 상당히 긴 배열이 주어지고 연속된 구간의 합을 구할 때 사용됨.
-- **시작점 S, 끝점 E**를 가리키는 변수를 각각 만들어서 투 포인터라고 한다.
-- S=0, E=0으로 시작해서 S==E 인 경우는 선택된 게 없는 부분 집합이다.
-- 원하는 값 M보다 작으면 E가 가리키는 배열 값을 더한 뒤 E를 한 칸 옮긴다.
-- M보다 크다면 S가 가리키는 배열 값을 빼준 뒤 S를 한 칸 옮긴다.
-- 이 때 M 값과 같다면 답을 1 더해주고 S를 한 칸 옮긴다.
-- 그리고 **E가 N에 도달**하면 계산을 끝낸다.
-
-#### C++
-~~~c++
-int s=0, e=0, sum=0, ans=0;
-while(1){
-    if(sum >= m) sum -= arr[s++];
-    else if(e == n) break;
-    else sum += arr[e++];
-        
-    if(sum == m) ans++;
-}
-~~~
-<br>
-
-### **위상 정렬**  
-- 유향 그래프의 정점을 정렬.
-- 그래프의 방향이 모두 한 방향으로 통일되도록 정렬함.
-- 만약 역행하는 그래프가 있다면 그것은 싸이클의 존재를 의미함.
-- 풀이 과정 
- 1. 자신에게 연결되어 있지 않은 노드들을( indegree가 0 ) Queue에 push.
- 2. N번만큼 for문을 수행, Queue의 front를 result[i]에 넣음.
- 3. 자신이 가리키는 노드의 indegree를 감소시키고 0이라면 Queue에 push. ( 이 때 result[i]는 정렬된 노드의 순서 )  
-**_만약 for문이 돌기 전에 Queue가 empty면 싸이클 존재를 의미함._**  
-**_for문 도중 Queue의 크기가 2이상인 것은 답이 여러개를 의미함._**  
-
-#### C++
-~~~c++
-for(int i=0; i<N; i++){
-    if(Q.empty()){
-        return 0;
-    }
- 
-    int cur = Q.front();
-    Q.pop();
-    result[i] = curr+1;
-    for(int next: adj[curr])
-        if(--indegree[next] == 0) Q.push(next);
-}
-~~~
-<br>
-
-### 최소 스패닝 트리(MST)  
-- 트리의 간선마다 cost가 있을 때, 간선의 가중치 합이 최소인 스패닝 트리.
-- MST를 위한 알고리즘은 프림, 솔린, 크루스칼 알고리즘이 있음.
-- **크루스칼 알고리즘**
-1. 간선들을 오름차순으로 모두 정렬시킴.
-2. 정렬 순서대로 검사하면서 간선과 연결된 두 노드가 같은 그룹이면 다음으로 넘어가고 같은 그룹이 아니면 해당 간선을 선택하고 두 노드를 같은 그룹에 포함시킨다. ( Union Find 사용 )
-3. 총 V-1개를 선택했으면 종료시키고 가중치 합을 구한다.  
-**_같은 그룹인지 확인, 같은 그룹에 포함시킬 때는 Union Find를 이용한다._**
-
-~~~c++
-int sum=0, cnt=0;
-for(int i=0; i<n; i++){
-    if(merge(v[i].f,v[i].t)){
-        sum += v[i].c;
-        if(++cnt == m-1) break;
-    }
-}
-~~~
-<br>
-
-### 다익스트라 알고리즘(Dijkstra's Algorithm)  
-- 정점과 간선이 주어질 때 시작점에서부터 목표 지점까지의 최소 거리를 구하는 알고리즘.
-- 조건으로는 간선의 길이가 항상 0 이상이 되어야한다.
-- 방문하지 않은 정점들 중 최소 거리를 우선으로 방문한다. -> priority queue 이용.
-- 방문하지 않은 정점의 최소 거리를 업데이트 시킬 순 있지만 방문한 정점은 재방문 x
-- 그 이유는 이미 방문할 예정인 정점 중에서 최소 거리인 정점부터 방문하기 때문에
-- 이미 방문한 정점은 다른 정점으로부터 최소 거리가 업데이트 될 수 없음.
-- 풀이방법
-1. 시작점에서 간선으로 이어지는 정점들의 거리를 업데이트 하고 priority queue에 정점 push.
-2. pq의 top(방문 할 예정인 정점 중 최소)을 방문.
-3. 이미 방문한 정점이라면 그냥 넘어간다.
-4. pq가 empty일 때까지 while문을 실행하고 빠져나오면 결과를 출력.
-  
-~~~c++
-dist[k-1] = 0; // 시작점을 0으로 초기화
-pq.push(V(k-1,0));
-while(!pq.empty()){
-    V cur = pq.top(); pq.pop();
-        
-    if(visit[cur.n]) continue; // BFS와 다르게 방문할 시점에서 visit을 체크하고
-    visit[cur.n] = true; // 방문하지 않았다면 방문함과 동시에 true로 바꿔준다.
-        
-    for(auto ee : adj[cur.n]){
-        int next = ee.v;
-        if(dist[next] <= cur.d + ee.w) continue;
-            
-        dist[next] = cur.d + ee.w;
-        pq.push(V(next,dist[next]));
-    }
-}
-~~~
   
 <br>
 <br>
@@ -258,6 +135,24 @@ tmp_l[0][0] = 6
 print(l)
 
 # [[1,2,3],[4,5,6],[7,8,9]]
+~~~
+
+### Reversed for문
+ - List 객체를 역방향으로 for문을 돌리고 싶을 때 효율적인 방법.
+ - reversed() 메소드를 사용.
+ - 직관적인 생각으로는 range()를 사용하여 마지막 index부터 접근할 수 있지만, 가독성에 문제가 있음.
+ - Slicing으로 list[::-1] 하는 방법이 있지만, 메모리 효율이 좋지 못함.
+ - reversed() 메소드는 Iterator를 사용하기 때문에 효율적이고 편함.
+
+~~~python
+list = [1,2,3]
+
+for l in reversed(list):
+    print(l)
+
+# 3
+# 2
+# 1
 ~~~
 
 ## C++
@@ -419,3 +314,129 @@ typedef struct E{
 ~~~
   
 <br> 
+
+# **알고리즘**
+### **Union Find**  
+- 여러 서로소 집합의 정보를 저장하고 있는 자료구조를 의미함.  
+- 트리 구조로써 집합을 표현하고 경로 압축과 레벨 최적화 도입해서 유용함.  
+#### C++
+```c++
+int find(int a){
+    if(uf[a] < 0) return a;
+    return uf[a] = find(uf[a]); //merge에서는 바로 위 부모만 저장하기 때문에 메모이제이션처럼 구현.
+}
+
+bool merge(int a, int b){
+    a = find(a);
+    b = find(b);
+    if(a==b) return false;
+    uf[b] = a;
+    return true;
+}
+```
+<br>
+
+### **Two Pointers**  
+- 상당히 긴 배열이 주어지고 연속된 구간의 합을 구할 때 사용됨.
+- **시작점 S, 끝점 E**를 가리키는 변수를 각각 만들어서 투 포인터라고 한다.
+- S=0, E=0으로 시작해서 S==E 인 경우는 선택된 게 없는 부분 집합이다.
+- 원하는 값 M보다 작으면 E가 가리키는 배열 값을 더한 뒤 E를 한 칸 옮긴다.
+- M보다 크다면 S가 가리키는 배열 값을 빼준 뒤 S를 한 칸 옮긴다.
+- 이 때 M 값과 같다면 답을 1 더해주고 S를 한 칸 옮긴다.
+- 그리고 **E가 N에 도달**하면 계산을 끝낸다.
+
+#### C++
+~~~c++
+int s=0, e=0, sum=0, ans=0;
+while(1){
+    if(sum >= m) sum -= arr[s++];
+    else if(e == n) break;
+    else sum += arr[e++];
+        
+    if(sum == m) ans++;
+}
+~~~
+<br>
+
+### **위상 정렬**  
+- 유향 그래프의 정점을 정렬.
+- 그래프의 방향이 모두 한 방향으로 통일되도록 정렬함.
+- 만약 역행하는 그래프가 있다면 그것은 싸이클의 존재를 의미함.
+- 풀이 과정 
+ 1. 자신에게 연결되어 있지 않은 노드들을( indegree가 0 ) Queue에 push.
+ 2. N번만큼 for문을 수행, Queue의 front를 result[i]에 넣음.
+ 3. 자신이 가리키는 노드의 indegree를 감소시키고 0이라면 Queue에 push. ( 이 때 result[i]는 정렬된 노드의 순서 )  
+**_만약 for문이 돌기 전에 Queue가 empty면 싸이클 존재를 의미함._**  
+**_for문 도중 Queue의 크기가 2이상인 것은 답이 여러개를 의미함._**  
+
+#### C++
+~~~c++
+for(int i=0; i<N; i++){
+    if(Q.empty()){
+        return 0;
+    }
+ 
+    int cur = Q.front();
+    Q.pop();
+    result[i] = curr+1;
+    for(int next: adj[curr])
+        if(--indegree[next] == 0) Q.push(next);
+}
+~~~
+<br>
+
+### 최소 스패닝 트리(MST)  
+- 트리의 간선마다 cost가 있을 때, 간선의 가중치 합이 최소인 스패닝 트리.
+- MST를 위한 알고리즘은 프림, 솔린, 크루스칼 알고리즘이 있음.
+- **크루스칼 알고리즘**
+1. 간선들을 오름차순으로 모두 정렬시킴.
+2. 정렬 순서대로 검사하면서 간선과 연결된 두 노드가 같은 그룹이면 다음으로 넘어가고 같은 그룹이 아니면 해당 간선을 선택하고 두 노드를 같은 그룹에 포함시킨다. ( Union Find 사용 )
+3. 총 V-1개를 선택했으면 종료시키고 가중치 합을 구한다.  
+**_같은 그룹인지 확인, 같은 그룹에 포함시킬 때는 Union Find를 이용한다._**
+
+~~~c++
+int sum=0, cnt=0;
+for(int i=0; i<n; i++){
+    if(merge(v[i].f,v[i].t)){
+        sum += v[i].c;
+        if(++cnt == m-1) break;
+    }
+}
+~~~
+<br>
+
+### 다익스트라 알고리즘(Dijkstra's Algorithm)  
+- 정점과 간선이 주어질 때 시작점에서부터 목표 지점까지의 최소 거리를 구하는 알고리즘.
+- 조건으로는 간선의 길이가 항상 0 이상이 되어야한다.
+- 방문하지 않은 정점들 중 최소 거리를 우선으로 방문한다. -> priority queue 이용.
+- 방문하지 않은 정점의 최소 거리를 업데이트 시킬 순 있지만 방문한 정점은 재방문 x
+- 그 이유는 이미 방문할 예정인 정점 중에서 최소 거리인 정점부터 방문하기 때문에
+- 이미 방문한 정점은 다른 정점으로부터 최소 거리가 업데이트 될 수 없음.
+- 풀이방법
+1. 시작점에서 간선으로 이어지는 정점들의 거리를 업데이트 하고 priority queue에 정점 push.
+2. pq의 top(방문 할 예정인 정점 중 최소)을 방문.
+3. 이미 방문한 정점이라면 그냥 넘어간다.
+4. pq가 empty일 때까지 while문을 실행하고 빠져나오면 결과를 출력.
+  
+~~~c++
+dist[k-1] = 0; // 시작점을 0으로 초기화
+pq.push(V(k-1,0));
+while(!pq.empty()){
+    V cur = pq.top(); pq.pop();
+        
+    if(visit[cur.n]) continue; // BFS와 다르게 방문할 시점에서 visit을 체크하고
+    visit[cur.n] = true; // 방문하지 않았다면 방문함과 동시에 true로 바꿔준다.
+        
+    for(auto ee : adj[cur.n]){
+        int next = ee.v;
+        if(dist[next] <= cur.d + ee.w) continue;
+            
+        dist[next] = cur.d + ee.w;
+        pq.push(V(next,dist[next]));
+    }
+}
+~~~
+  
+<br>
+<br>
+  
