@@ -10,6 +10,7 @@
   * [Deep Copy](#deep-copy)
   * [Reversed for문](#reversed-for문)
   * [공백문자열을 공백으로 split](#공백문자열을-공백으로-split)
+  * [2차원 배열 초기화](#2차원-배열-초기화)
   
 
 * ## **[알고리즘](#알고리즘-1)**  
@@ -164,6 +165,13 @@ for l in reversed(list):
 print("   ".split(" "))
 
 # ['', '', '', '']
+~~~
+
+### 2차원 배열 초기화
+ - 파이썬의 경우 1차원 배열에 * 연산으로 2차원을 만들면 같은 주소 값이 되기 때문에 안됨.
+
+~~~python
+array = [ [0]*n for _ in range(n) ]
 ~~~
 
 ## C++
