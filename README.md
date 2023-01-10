@@ -1,6 +1,7 @@
 # Contents
 * ## **[문법 및 함수 정리](#문법-및-함수-정리-1)**
 * ### [Python](#python-1)
+  * [Queue 사용](#queue-사용)
   * [Priority Queue 사용](#priority-queue-사용)
   * [변수 값 일괄 수정](#변수-값-일괄-수정)
   * [시간 Stinrg을 int형 분 또는 초로 계산하기](#시간-Stinrg을-int형-분-또는-초로-계산하기)
@@ -40,6 +41,24 @@
   
 # 문법 및 함수 정리
 ## Python
+### Queue 사용
+ - Python에서는 Queue 자료구조가 따로 존재하지 않음.
+ - Deque로 Queue 기능 사용
+
+~~~python
+from collections import deque
+
+q = deque([1,2,3])
+q.append(7)
+q.append(8)
+print(q)
+# deque([4, 5, 6, 7, 8])
+
+print(queue.popleft())
+# 5
+
+~~~
+
 ### Priority Queue 사용
  - heapq package를 사용하는 것이 일반 PriorityQueue보다 더 빠름
  - "queue_name" list에 val 값 넣기
