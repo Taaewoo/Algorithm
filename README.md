@@ -17,6 +17,7 @@
 * ## **[알고리즘](#알고리즘-1)**  
   * [Union Find](#union-find)  
   * [Two Pointers](#two-pointers)  
+  * [Counting Sort](#Counting-Sort)  
   * [위상 정렬](#위상-정렬)  
   * [최소 스패닝 트리(MST)](#최소-스패닝-트리mst)  
   * [다익스트라 알고리즘(Dijkstra's Algorithm)](#다익스트라-알고리즘dijkstras-algorithm)
