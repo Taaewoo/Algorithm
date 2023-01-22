@@ -12,11 +12,13 @@
   * [Reversed for문](#reversed-for문)
   * [공백문자열을 공백으로 split](#공백문자열을-공백으로-split)
   * [2차원 배열 초기화](#2차원-배열-초기화)
+  * [2차원 배열 정렬](#2차원-배열-정렬)
   
 
 * ## **[알고리즘](#알고리즘-1)**  
   * [Union Find](#union-find)  
   * [Two Pointers](#two-pointers)  
+  * [Counting Sort](#Counting-Sort)  
   * [위상 정렬](#위상-정렬)  
   * [최소 스패닝 트리(MST)](#최소-스패닝-트리mst)  
   * [다익스트라 알고리즘(Dijkstra's Algorithm)](#다익스트라-알고리즘dijkstras-algorithm)
@@ -191,6 +193,17 @@ print("   ".split(" "))
 
 ~~~python
 array = [ [0]*n for _ in range(n) ]
+~~~
+
+### 2차원 배열 정렬
+ - lambda를 사용하여 2차원 배열 각 index에 맞게 정렬하는 방법.
+
+~~~python
+twoDimensionArray = [[3,3],[3,2],[1,1],[4,3]]
+
+twoDimensionArray.sort(key = lambda x : (x[0], x[1]))
+
+print(twoDimensionArray)
 ~~~
 
 ## C++
@@ -478,3 +491,4 @@ while(!pq.empty()){
 <br>
 <br>
   
+
